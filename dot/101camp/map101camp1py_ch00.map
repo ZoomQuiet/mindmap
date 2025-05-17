@@ -1,0 +1,20 @@
+<map id="map101camp1py_ch00" name="map101camp1py_ch00">
+<area shape="rect" id="node1" href="https://py.101.camp/" title="蠎营101camp" alt="" coords="203,121,314,160"/>
+<area shape="rect" id="node2" href="#" title="ch00 CLI\n 是元袓 MVP" alt="" coords="206,193,311,239"/>
+<area shape="rect" id="node3" href="https://docs.python.org/zh-cn/3/" title="Python 3.7" alt="" coords="89,265,180,304"/>
+<area shape="rect" id="node8" href="#" title="ch01 git\n 是 MVP 保障" alt="" coords="204,262,313,308"/>
+<area shape="rect" id="node4" href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="tutorial" alt="" coords="5,334,77,373"/>
+<area shape="rect" id="node5" href="https://pypi.org/" title="pip" alt="" coords="101,334,173,373"/>
+<area shape="rect" id="node6" href="https://docs.python.org/zh-cn/3/library/logging.html" title="logging" alt="" coords="7,402,79,441"/>
+<area shape="rect" id="node7" href="https://docs.python.org/zh-cn/3/library/pprint.html" title="pprint" alt="" coords="103,402,175,441"/>
+<area shape="rect" id="node9" href="#" title="ch02 pip\n 是 MVP 宝藏" alt="" coords="201,330,311,376"/>
+<area shape="rect" id="node10" href="#" title="ch03 txt\n 是安定 MVP" alt="" coords="201,399,306,445"/>
+<area shape="rect" id="node11" href="#" title="ch04 web\n 是高速 MVP" alt="" coords="195,467,301,513"/>
+<area shape="rect" id="node12" href="#" title="ch05 SaaS\n 是轻巧 MVP" alt="" coords="195,536,301,582"/>
+<area shape="rect" id="node13" href="#" title="ch06 API\n 是 MVP 资源" alt="" coords="193,604,303,650"/>
+<area shape="rect" id="node14" href="#" title="ch07 CI/D \n 落实 MVP" alt="" coords="201,673,292,719"/>
+<area shape="rect" id="node15" href="#" title="ch08 BP: \n 要和朋友一起探索" alt="" coords="170,741,313,787"/>
+<area shape="rect" id="node16" href="#" title="ch09 BP: \n 自信的嗯哼吧" alt="" coords="266,810,379,856"/>
+<area shape="poly" id="node17" href="mailto:guru101camp@googlegroups.com?subject=[101camp1py] " title="邮件吼俺们" alt="" coords="263,76,260,70,250,63,235,59,217,55,196,54,175,55,157,59,142,63,132,70,129,76,132,83,142,89,157,94,175,97,196,99,217,97,235,94,250,89,260,83"/>
+<area shape="poly" id="node18" href="https://gitlab.com/101camp" title="返回\n" alt="" coords="359,76,357,70,352,63,344,59,334,55,323,54,312,55,302,59,294,63,288,70,287,76,288,83,294,89,302,94,312,97,323,99,334,97,344,94,352,89,357,83"/>
+</map>

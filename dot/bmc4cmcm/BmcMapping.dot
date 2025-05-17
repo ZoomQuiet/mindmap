@@ -1,0 +1,130 @@
+    /*生成命令:
+$ dot -Tpng BmcMapping.dot -o BmcMapping.png -Tcmapx -o BmcMapping.map
+    全局设定
+plaintext
+    */
+
+digraph BmcMapping {
+    /*全局设定*/
+    graph [label="BMC-AWS tech maping \n{150415 by Zoom.Quiet powered by Graphviz}"
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="l",labelloc="t"
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=TB
+        ,bgcolor="#333333"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333"
+        ,color=gray,fontcolor=snow
+        ,shape=component
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=snow
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+*/
+
+
+    user         [label="user\nmobile client",shape=egg];
+
+    /*图例关系
+    srvPUB->installer [label="2.0",style="dotted"];
+    APP_NFC->APP_CHK [label="2.1",style="setlinewidth(2)"];
+SRV_ECHO->APP_DL [label="3.3",style="dashed"];
+
+CloudFront->
+    CloudFront [label="CloudFront"];
+    */
+
+user->{R4ir R4ue R4sg} [style="setlinewidth(2)"];
+
+subgraph cluster_aws {
+    label = "AWS";
+        color=snow;
+        style="setlinewidth(0.5)";
+
+    IAM [label="IAM"];
+
+    subgraph cluster_bmc {
+        label = "BMC";
+            color=snow;
+            style="setlinewidth(0.5)";
+
+        R4ir [label="region\nEU-I", shape="tab"];
+        R4ue [label="region\nUS-E", shape="tab"];
+        R4sg [label="region\nSingapore", shape="tab"];
+
+        ELB [label="ELB"];
+    ElastiCache [label="ElastiCache\nredis"];
+        Dynamo [label="DDB\n3+Tb", shape=box3d];
+        RDS [label="RDS\n(MySQL)\n~3Tb", shape=box3d];
+        S3 [label="S3\n~2Pb", shape=box3d];
+            S3F [label="uplod files\nfoto,video,atta.", shape=note];
+            S3DB [label="S3DB\nown file DB", shape=note];
+
+        cloudbak [label="EC2\ncontrol srv."
+            ,URL="http://bmc.gzcmcm.com/doc/cloudbak/README.html"];
+        bmts [label="EC2\ntransfer srv."
+            ,URL="http://bmc.gzcmcm.com/doc/bmts/README.html"];
+
+    }
+
+    R4ue->ELB->cloudbak [style="setlinewidth(1.5)"];
+    ELB->bmts [label="V2 API\nupload files",style="setlinewidth(1.5)"];
+        bmts->cloudbak [label="V2 API\nlog meta",style="setlinewidth(1.5)"];
+    cloudbak->bmts [label="V1 API\nuser files", style="setlinewidth(1)"];
+        bmts->S3;
+            S3->S3F;
+            S3->S3DB [label="testing",style="dotted"];
+
+    cloudbak->RDS [label="CM/B\nuser data", style="setlinewidth(1)"];
+    cloudbak->Dynamo [label="CMS\nuser data", style="setlinewidth(1)"];
+
+    ElastiCache->cloudbak [label="chk first",style="dashed"];
+}
+
+
+
+
+/*
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

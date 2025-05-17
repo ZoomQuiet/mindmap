@@ -1,0 +1,84 @@
+/*生成命令:
+$ dot -Tpng qt2api4rest_problem.dot -o qt2api4rest_problem.png 
+-Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+    */
+
+digraph G4theme_canclick {
+    /*全局设定*/
+    graph [label="Qt远程控制难点-思考图"
+        ,fontsize=14.0
+        ,fontname="Noto Sans S Chinese Thin"
+        ,labeljust="r",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=LR
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,fontname="Noto Sans S Chinese Thin"
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,fontname="Noto Sans S Chinese Thin"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+*/
+
+    RCTRL [label="中控系统",shape=box];
+    APIsrv [label="API网站",shape=box];
+        APItri [label="API触发状态",shape=tab];
+    Qt [label="GUI进程",shape=box];
+        GUItri [label="GUI触发状态",shape=tab];
+
+    MAIN [label="GUI主程",shape=component];
+    QtUI [label="GUI界面",shape=component];
+    QtVW [label="GUI视频",shape=component];
+
+    /*图例关系
+    PSDparser->PSDexport [label="1.1"];
+    USSO->UsrInfoCSrv [label="2.2",style="dashed"];dotted
+    UsrInfoCSrv->commTAB [label="1.1",style="setlinewidth(1.5)"];
+    color=red,green,cyan
+    */
+
+    Qt->Qt [label="event\nloop",color=blue,style="setlinewidth(1.5)"];
+
+    RCTRL->APIsrv;
+        APIsrv->APItri;
+
+    Qt->APIsrv [label="fast",color=red,style="dashed"];
+    APIsrv->Qt [label="pull only",color=red,style="dashed"];
+
+    Qt->MAIN;
+
+    MAIN->QtUI->QtVW;
+        QtVW->GUItri;
+
+    APItri->GUItri->APItri [label="HOW?",color=red,style="dotted"];
+
+    edge [style=invis];
+
+}
+

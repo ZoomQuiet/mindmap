@@ -1,0 +1,120 @@
+/*生成命令:
+$ dot -Tpng qt2api4rest_case_record.dot -o qt2api4rest_case_record.png 
+-Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+    */
+
+digraph G4theme_canclick {
+    /*全局设定*/
+    graph [label="数据录制控制交互-流程图"
+        ,fontsize=14.0
+        ,fontname="Noto Sans S Chinese Thin"
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=TB
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,fontname="Noto Sans S Chinese Thin"
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,fontname="Noto Sans S Chinese Thin"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+*/
+
+    RCTRL [label="中控系统",shape=box];
+    APIsrv [label="API网站",shape=box];
+        APItri [label="API触发状态",shape=component];
+    Qt [label="GUI进程",shape=box];
+        GUItri [label="GUI触发状态",shape=component];
+    MAIN [label="GUI主程",shape=component];
+    QtUI [label="GUI界面",shape=component];
+    QtVW [label="GUI视频",shape=component];
+
+    PATH [label="数据目录",shape=tab];
+    case_new [label="case/new",shape=note];
+    case_created [label="set/case/created",shape=note];
+    case_nil [label="set/case/nil",shape=note];
+
+    reco_start [label="record/start",shape=note];
+    reco_started [label="set/record/started",shape=note];
+    reco_stop [label="record/stop",shape=note];
+    reco_done [label="set/record/done",shape=note];
+
+    /*图例关系
+    USSO->UsrInfoCSrv [label="2.2",style="dashed"];dotted
+    UsrInfoCSrv->commTAB [label="1.1",style="setlinewidth(1.5)"];
+    color=red,green,cyan,darkolivegreen
+    APItri->GUItri->APItri [label="HOW?",color=red,style="dotted"];
+    RCTRL->APIsrv [label="http", color=darkgreen,style="setlinewidth(1)"];
+    APIsrv->RCTRL [label="REST"
+                    ,color=darkgreen,style="setlinewidth(1)"];
+    */
+
+    RCTRL->case_new     [label="0.0",color=darkgreen,style="setlinewidth(1)"];
+    RCTRL->reco_start   [label="1.0",color=darkgreen,style="setlinewidth(1)"];
+    RCTRL->reco_stop    [label="2.0",color=darkgreen,style="setlinewidth(1)"];
+    {case_new reco_start reco_stop}->APIsrv [color=darkgreen
+                                            ,style="setlinewidth(1)"];
+    APIsrv->APItri [label="sync",color=red,style="dotted"];
+
+    QtVW->GUItri [label="0.1\nname4case\ncrt_path\nrecord=1",color=red];
+        GUItri->case_created->APIsrv [label="0.2"];
+    QtVW->GUItri [label="1.1\nrecord=1",color=red];
+        GUItri->reco_started->APIsrv [label="1.2"];
+
+    APIsrv->APItri [label="2.1\nrecord=3",color=red];
+        QtVW->PATH [label="2.2\nmv crt_path",color=red];
+        QtVW->GUItri [label="2.3\nrecord=0;case=0",color=red];
+            GUItri->case_nil [label="2.4"];
+            GUItri->reco_done [label="2.5"];
+
+    APIsrv->QtVW  [label="缓期",color=darkgreen,style="dashed,setlinewidth(1)"];
+    {case_nil reco_done}->APIsrv [color=darkgreen
+                                            ,style="setlinewidth(1)"];
+
+    Qt->Qt [label="Qt loop",color=blue,style="setlinewidth(2.5)"];
+    APIsrv->Qt [label="定期",color=blue,style="dotted,setlinewidth(1.5)"];
+    Qt->MAIN [label="调用"];
+        MAIN->QtUI->QtVW [label="import"];
+        QtVW->QtVW [label="Qt loop",color=blue,style="setlinewidth(2.5)"];
+
+    MAIN->QtVW [label="emit",color=darkolivegreen
+                , style="dashed,setlinewidth(1.5)"];
+
+    /*
+        APIsrv->APItri [label="sync"];
+        GUItri->APIsrv [label="push",color=blue,style="dashed"];
+        {MAIN QtVW}->GUItri [label="set"];
+
+    */
+    edge [style=invis];
+    APItri->case_created->reco_started->{case_nil reco_done};
+
+
+}
+

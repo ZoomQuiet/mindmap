@@ -1,0 +1,252 @@
+    /*生成命令:
+$ dot -Tpng AwSrvMapping.dot -o AwSrvMapping.png -Tcmapx -o AwSrvMapping.map
+    全局设定
+plaintext
+    */
+
+digraph AwSrvMapping {
+    /*全局设定*/
+    graph [label="AWS srv. maping \n{150415 by Zoom.Quiet ;-) powered by Graphviz}"
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="l",labelloc="t"
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=LR
+        ,bgcolor="#333333"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333"
+        ,color=gray,fontcolor=snow
+        ,shape=component
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=snow
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+  ,style="rounded,dotted"];
+*/
+
+
+    /*图例关系
+    srvPUB->installer [label="2.0",style="dotted"];
+    APP_NFC->APP_CHK [label="2.1",style="setlinewidth(2)"];
+SRV_ECHO->APP_DL [label="3.3",style="dashed"];
+CloudFront->
+    CloudFront [label="CloudFront"];
+    */
+
+
+
+subgraph cluster_aws {
+    label = "AWS";
+        color=snow;
+        style="dotted,setlinewidth(2.5)";
+
+    subgraph cluster_ops {
+        label = "AWS DevOps";
+            color=snow;
+            style="dotted,setlinewidth(2)";
+
+        OpsWorks [label="OpsWorks",shape=tab];
+            CloudTrail [label="CloudTrail",shape=tab];
+            Config [label="Config",shape=tab];
+            CloudWatch [label="CloudWatch",shape=tab];
+        Beanstalk [label="Elastic Beanstalk",shape=tab];
+        CloudFormation [label="CloudFormation",shape=tab];
+        CodeDeploy [label="CodeDeploy",shape=tab];
+
+        subgraph cluster_mob {
+            label = "AWS mobiling";
+                color=snow;
+                style="dashed,setlinewidth(0.5)";
+
+            Cognito [label="Cognito"];
+            MobAnalytics [label="Mobile Analytics"];
+
+        } // cluster_mob
+
+
+        KMS->Cognito->EC2;
+            MobAnalytics->{S3 Redshift};
+
+        CodeDeploy->EC2;
+        CodeDeploy->Lambda [label="future",style="dotted,setlinewidth(1)"];
+
+        KMS->{IAM CloudHSM};
+
+        KMS[label="KMS",shape=tab];
+            IAM [label="IAM",shape=tab];
+            CloudHSM [label="CloudHSM",shape=tab];
+
+        OpsWorks->{Beanstalk CloudFormation CloudTrail Config CloudWatch};
+            {Beanstalk Config CloudFormation}->EC2;
+    
+        EC2->KMS;
+
+
+
+        subgraph cluster_net {
+            label = "AWS NetWorking";
+                color=snow;
+                style="dashed,setlinewidth(1.5)";
+
+            ELB [label="ELB"];
+            VPC [label="VPC"];
+
+            ELB->{CFront EC2};
+
+            {Scaling EC2CS}->EC2;
+
+            {Kinesis S3 DDB}->Lambda;
+
+            subgraph cluster_comput {
+                label = "AWS Computing";
+                    color=snow;
+                    style="dashed,setlinewidth(1)";
+
+                Scaling[label="Scaling",shape=tab];
+                EC2 [label="EC2"];
+                EC2CS [label="Container Srv."];
+
+                Lambda [label="Lambda"
+                    ,style="filled,setlinewidth(0.5)"
+                    ,fillcolor="#E5460E"
+                    ,color=gray
+                    ,fontcolor=snow];
+
+
+                subgraph cluster_app {
+                    label = "AWS applicating";
+                        color=snow;
+                        style="dashed,setlinewidth(0.5)";
+
+                    SQS [label="SQS"];
+                    SWF [label="SWF"];
+                        AppStream [label="AppStream"];
+                    
+                    SES [label="SES"];
+                    SNS [label="SNS"];
+
+                    CloudSearch[label="CloudSearch"];
+                    Transcoder[label="Transcoder"];
+                    FPS [label="FPS"];
+
+                    {SQS SWF}->AppStream;
+                    {SQS SWF FPS}->{SES SNS};
+
+                    Transcoder->S3;
+                } // cluster_app
+
+
+
+            }// cluster_comput
+
+            EC2->{RDS ElastiCache S3};
+            {RDS DDB}->Kinesis->{EMR Redshift};
+
+
+            subgraph cluster_analyzing {
+                label = "AWS analyzing";
+                    color=snow;
+                    style="dashed,setlinewidth(1.5)";
+
+                EMR [label="EMR\n(Hadoop)"];
+                Kinesis [label="Kinesis"];
+                Redshift [label="Redshift"];
+
+                Redshift->{DDB RDS};
+
+                subgraph cluster_db {
+                    label = "AWS DB";
+                        color=snow;
+                        style="setlinewidth(0.5)";
+                    
+                    ElastiCache->{RDS DDB};
+                    RDS->Aurora;
+
+                    RDS [label="RDS",shape=box3d];
+                        Aurora [label="Aurora",shape=box3d];
+                    DDB [label="DynamoDB",shape=box3d];
+                    ElastiCache[label="ElastiCache\n(Redis)",shape=box3d];
+
+                }// cluster_db
+
+                subgraph cluster_storage {
+                    label = "AWS Storage";
+                        color=snow;
+                        style="setlinewidth(1)";
+
+                    CFront->S3->Glacier->EBS;
+
+                    CFront[label="CloudFront"];
+                    S3 [label="S3",shape=box3d];
+                    Glacier [label="Glacier",shape=note];
+                    EBS [label="EBS",shape=note];
+                    /*
+                    ImEX [label="Import/Export",shape=note];
+                    SGateway [label="Storage Gateway",shape=note];
+                    */
+                    
+                } // cluster_storage
+
+            } // cluster_analyzing
+
+        } // subgraph cluster_net
+    } // subgraph cluster_ops
+
+
+
+    subgraph cluster_support {
+        label = "AWS supporting";
+            color=snow;
+            style="dotted,setlinewidth(0.5)";
+
+        Support [label="Support",shape=note];
+    } // cluster_support
+
+
+}
+
+
+
+
+/*
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

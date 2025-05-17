@@ -1,0 +1,71 @@
+<map id="camp0py2map_ch07" name="camp0py2map_ch07">
+<area shape="rect" id="node1" href="https://gitlab.com/101camp" title="蠎营\nPythoniCamp" alt="" coords="124,806,234,852"/>
+<area shape="rect" id="node2" href="#" title="ch00\n周蠎" alt="" coords="252,719,324,765"/>
+<area shape="rect" id="node3" href="https://www.python.org/" title="Python 2.7" alt="" coords="228,598,320,637"/>
+<area shape="rect" id="node6" href="#" title="ch01\nCLI" alt="" coords="362,713,434,753"/>
+<area shape="rect" id="node4" href="https://github.com/gasolin/zhpy" title="zhpy" alt="" coords="173,529,245,568"/>
+<area shape="rect" id="node5" href="https://pypi.org/" title="pip" alt="" coords="238,498,310,537"/>
+<area shape="rect" id="node14" href="https://click.palletsprojects.com/en/7.x/" title="Click" alt="" coords="163,590,235,629"/>
+<area shape="rect" id="node33" href="https://docs.python.org/3.7/library/logging.html" title="logging" alt="" coords="265,454,337,493"/>
+<area shape="rect" id="node59" href="http://docs.python-requests.org/en/master/" title="request" alt="" coords="329,389,401,428"/>
+<area shape="rect" id="node7" href="https://en.wikipedia.org/wiki/Shell_(computing)" title="shell" alt="" coords="506,678,578,717"/>
+<area shape="rect" id="node12" href="https://docs.python.org/3/" title="Python 3.7" alt="" coords="239,676,331,714"/>
+<area shape="rect" id="node19" href="#" title="ch02\nhelp" alt="" coords="369,792,441,832"/>
+<area shape="rect" id="node8" href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" title="bash &#160;" alt="" coords="587,767,659,806"/>
+<area shape="rect" id="node9" href="https://en.wikipedia.org/wiki/Z_shell" title="zsh &#160;&#160;" alt="" coords="539,771,611,810"/>
+<area shape="rect" id="node10" href="https://iterm2.com" title="iterm2" alt="" coords="746,604,818,642"/>
+<area shape="rect" id="node11" href="http://cmder.net/" title="cmder " alt="" coords="737,653,809,692"/>
+<area shape="rect" id="node13" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="REPL " alt="" coords="158,758,230,796"/>
+<area shape="rect" id="node15" href="https://en.wikipedia.org/wiki/Standard_streams" title="stdin" alt="" coords="69,650,141,689"/>
+<area shape="rect" id="node16" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)" title="stdout" alt="" coords="50,548,122,587"/>
+<area shape="rect" id="node17" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)" title="stderr" alt="" coords="44,602,116,640"/>
+<area shape="rect" id="node46" href="https://curl.haxx.se/" title="cURL" alt="" coords="609,479,681,517"/>
+<area shape="rect" id="node20" href="https://docs.python.org/3.7/library/functions.html#print" title="print()" alt="" coords="330,915,402,954"/>
+<area shape="rect" id="node23" href="https://docs.python.org/3.7/library/functions.html#dir" title="dir()" alt="" coords="402,881,474,920"/>
+<area shape="rect" id="node24" href="https://docs.python.org/3.7/library/functions.html#help" title="help()" alt="" coords="298,855,370,893"/>
+<area shape="rect" id="node25" href="#" title="ch03\ngit" alt="" coords="427,696,499,736"/>
+<area shape="rect" id="node21" href="https://docs.python.org/3/library/pprint.html" title="pprint" alt="" coords="343,1026,415,1065"/>
+<area shape="rect" id="node22" href="https://docs.python.org/3/library/stdtypes.html?highlight=format#str.format" title="format()" alt="" coords="254,1001,326,1039"/>
+<area shape="rect" id="node26" href="https://git-scm.com/" title="git" alt="" coords="509,823,581,862"/>
+<area shape="rect" id="node32" href="#" title="ch04\npip" alt="" coords="389,548,461,588"/>
+<area shape="rect" id="node27" href="https://github.com/" title="github" alt="" coords="611,864,683,903"/>
+<area shape="rect" id="node28" href="https://gitlab.com/" title="gitlab" alt="" coords="562,950,634,989"/>
+<area shape="rect" id="node29" href="https://gitlab.com/help/user/project/issues/index.md" title="issue" alt="" coords="526,1062,598,1101"/>
+<area shape="rect" id="node30" href="https://gitlab.com/help/user/project/wiki/index.md" title="wiki" alt="" coords="612,1048,684,1086"/>
+<area shape="rect" id="node31" href="https://gitlab.com/help/user/discussions/index.md" title="commit comments" alt="" coords="644,994,784,1032"/>
+<area shape="rect" id="node41" href="#" title="ch05\ntext" alt="" coords="502,476,574,516"/>
+<area shape="rect" id="node34" href="https://docs.python.org/3.7/library/logging.html#handler-objects" title="file\nHandler" alt="" coords="231,372,303,412"/>
+<area shape="rect" id="node35" href="https://docs.python.org/3.7/library/logging.html#levels" title="Bug Level" alt="" coords="131,365,218,403"/>
+<area shape="rect" id="node36" href="#" title="CRITICAL" alt="" coords="13,405,101,443"/>
+<area shape="rect" id="node37" href="#" title="ERROR" alt="" coords="91,260,165,299"/>
+<area shape="rect" id="node38" href="#" title="WARNING" alt="" coords="133,246,225,285"/>
+<area shape="rect" id="node39" href="#" title="INFO" alt="" coords="49,299,121,338"/>
+<area shape="rect" id="node40" href="#" title="DEBUG" alt="" coords="22,351,96,390"/>
+<area shape="rect" id="node42" href="https://en.wikipedia.org/wiki/Comma-separated_values" title="csv" alt="" coords="437,386,509,425"/>
+<area shape="rect" id="node43" href="https://docs.python.org/3/library/stdtypes.html?highlight=dict#dict" title="dict" alt="" coords="448,473,520,512"/>
+<area shape="rect" id="node44" href="https://docs.python.org/3.7/library/pickle.html" title="pickle" alt="" coords="501,410,573,449"/>
+<area shape="rect" id="node45" href="#" title="ch06\nweb" alt="" coords="603,398,675,438"/>
+<area shape="rect" id="node47" href="https://en.wikipedia.org/wiki/World_Wide_Web" title="web" alt="" coords="673,360,745,398"/>
+<area shape="rect" id="node52" href="https://en.wikipedia.org/wiki/Web_framework" title="framework" alt="" coords="511,311,601,350"/>
+<area shape="rect" id="node60" href="#" title="ch07\nlogging" alt="" coords="688,291,760,331"/>
+<area shape="rect" id="node48" href="https://www.w3schools.com/Css/" title="css" alt="" coords="774,414,846,453"/>
+<area shape="rect" id="node49" href="https://www.w3schools.com/html/" title="html" alt="" coords="745,285,817,324"/>
+<area shape="rect" id="node50" href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript" alt="" coords="770,364,860,403"/>
+<area shape="rect" id="node51" href="https://en.wikipedia.org/wiki/Representational_state_transfer" title="RESTful" alt="" coords="561,355,637,393"/>
+<area shape="rect" id="node53" href="https://bottlepy.org/" title="bottle" alt="" coords="430,304,502,343"/>
+<area shape="rect" id="node54" href="http://flask.pocoo.org/" title="flask" alt="" coords="558,239,630,278"/>
+<area shape="rect" id="node55" href="https://www.djangoproject.com/" title="django" alt="" coords="597,267,669,306"/>
+<area shape="rect" id="node56" href="https://bottlepy.org/docs/dev/routing.html" title="route" alt="" coords="361,219,433,258"/>
+<area shape="rect" id="node57" href="#" title="get" alt="" coords="393,187,465,226"/>
+<area shape="rect" id="node58" href="#" title="post" alt="" coords="439,185,511,224"/>
+<area shape="rect" id="node61" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="http" alt="" coords="700,168,772,207"/>
+<area shape="rect" id="node64" href="#" title="ch08\nSaaS" alt="" coords="816,271,888,311"/>
+<area shape="rect" id="node62" href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator" title="url" alt="" coords="766,85,838,123"/>
+<area shape="rect" id="node63" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="uri" alt="" coords="677,54,749,93"/>
+<area shape="rect" id="node65" href="#" title="ch09\nAPI" alt="" coords="923,249,995,289"/>
+<area shape="rect" id="node66" href="#" title="ch10\nMVP" alt="" coords="1019,212,1091,252"/>
+<area shape="rect" id="node67" href="#" title="ch11\nCI" alt="" coords="1108,166,1180,206"/>
+<area shape="rect" id="node68" href="#" title="ch12\n探索" alt="" coords="1192,113,1264,159"/>
+<area shape="poly" id="node73" href="mailto:pythonicamp@googlegroups.com?subject=[101 mapping] " title="邮件吼俺" alt="" coords="118,856,116,849,108,843,95,838,79,835,62,834,44,835,29,838,16,843,8,849,5,856,8,863,16,869,29,874,44,877,62,878,79,877,95,874,108,869,116,863"/>
+<area shape="poly" id="node74" href="https://gitlab.com/pythonicamp" title="返回\n" alt="" coords="158,929,156,922,151,916,143,911,133,908,122,907,111,908,101,911,93,916,88,922,86,929,88,936,93,942,101,947,111,950,122,951,133,950,143,947,151,942,156,936"/>
+</map>

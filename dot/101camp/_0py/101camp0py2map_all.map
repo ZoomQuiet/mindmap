@@ -1,0 +1,132 @@
+<map id="pyc101_learnning_map" name="pyc101_learnning_map">
+<area shape="rect" id="node1" href="https://gitlab.com/101camp" title="蠎营\nPythoniCamp" alt="" coords="141,721,243,767"/>
+<area shape="rect" id="node2" href="#" title="ch00\n周蠎" alt="" coords="304,721,376,767"/>
+<area shape="rect" id="node3" href="https://www.python.org/" title="Python 2.7" alt="" coords="398,622,483,661"/>
+<area shape="rect" id="node6" href="#" title="ch01\nCLI" alt="" coords="405,774,477,814"/>
+<area shape="rect" id="node4" href="https://github.com/gasolin/zhpy" title="zhpy" alt="" coords="614,610,686,649"/>
+<area shape="rect" id="node5" href="https://pypi.org/" title="pip" alt="" coords="512,565,584,604"/>
+<area shape="rect" id="node14" href="https://click.palletsprojects.com/en/7.x/" title="Click" alt="" coords="614,673,686,712"/>
+<area shape="rect" id="node33" href="https://docs.python.org/3.7/library/logging.html" title="logging" alt="" coords="803,590,875,629"/>
+<area shape="rect" id="node59" href="http://docs.python-requests.org/en/master/" title="request" alt="" coords="1472,462,1544,501"/>
+<area shape="rect" id="node7" href="https://en.wikipedia.org/wiki/Shell_(computing)" title="shell" alt="" coords="512,849,584,888"/>
+<area shape="rect" id="node12" href="https://docs.python.org/3/" title="Python 3.7" alt="" coords="506,736,591,774"/>
+<area shape="rect" id="node19" href="#" title="ch02\nhelp" alt="" coords="512,1038,584,1078"/>
+<area shape="rect" id="node8" href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" title="bash &#160;" alt="" coords="614,798,686,837"/>
+<area shape="rect" id="node9" href="https://en.wikipedia.org/wiki/Z_shell" title="zsh &#160;&#160;" alt="" coords="614,861,686,900"/>
+<area shape="rect" id="node18" href="https://en.wikipedia.org/wiki/Terminal_emulator" title="terminal" alt="" coords="1472,944,1544,982"/>
+<area shape="rect" id="node10" href="https://iterm2.com" title="iterm2" alt="" coords="1588,1053,1660,1092"/>
+<area shape="rect" id="node11" href="http://cmder.net/" title="cmder " alt="" coords="1588,1116,1660,1154"/>
+<area shape="rect" id="node13" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="REPL " alt="" coords="614,736,686,774"/>
+<area shape="rect" id="node15" href="https://en.wikipedia.org/wiki/Standard_streams" title="stdin" alt="" coords="708,736,780,774"/>
+<area shape="rect" id="node16" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)" title="stdout" alt="" coords="708,610,780,649"/>
+<area shape="rect" id="node17" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)" title="stderr" alt="" coords="708,673,780,712"/>
+<area shape="rect" id="node46" href="https://curl.haxx.se/" title="cURL" alt="" coords="1588,1309,1660,1348"/>
+<area shape="rect" id="node90" href="https://api.slack.com/tutorials/tunneling-with-ngrok" title="ngrok" alt="" coords="1588,1178,1660,1217"/>
+<area shape="rect" id="node91" href="https://github.com/tmux/tmux" title="tmux" alt="" coords="1588,802,1660,841"/>
+<area shape="rect" id="node92" href="https://www.gnu.org/software/screen/" title="screen" alt="" coords="1588,865,1660,904"/>
+<area shape="rect" id="node96" href="https://termux.com/" title="Termux" alt="" coords="1588,928,1660,966"/>
+<area shape="rect" id="node97" href="https://en.wikipedia.org/wiki/Secure_Shell" title="SSH" alt="" coords="1588,990,1660,1029"/>
+<area shape="rect" id="node20" href="https://docs.python.org/3.7/library/functions.html#print" title="print()" alt="" coords="614,976,686,1014"/>
+<area shape="rect" id="node23" href="https://docs.python.org/3.7/library/functions.html#dir" title="dir()" alt="" coords="614,1038,686,1077"/>
+<area shape="rect" id="node24" href="https://docs.python.org/3.7/library/functions.html#help" title="help()" alt="" coords="614,1166,686,1205"/>
+<area shape="rect" id="node25" href="#" title="ch03\ngit" alt="" coords="614,1102,686,1142"/>
+<area shape="rect" id="node21" href="https://docs.python.org/3/library/pprint.html" title="pprint" alt="" coords="708,976,780,1014"/>
+<area shape="rect" id="node22" href="https://docs.python.org/3/library/stdtypes.html?highlight=format#str.format" title="format()" alt="" coords="708,1038,780,1077"/>
+<area shape="rect" id="node26" href="https://git-scm.com/" title="git" alt="" coords="708,1309,780,1348"/>
+<area shape="rect" id="node32" href="#" title="ch04\npip" alt="" coords="708,1102,780,1142"/>
+<area shape="rect" id="node27" href="https://github.com/" title="github" alt="" coords="803,1372,875,1410"/>
+<area shape="rect" id="node28" href="https://gitlab.com/" title="gitlab" alt="" coords="803,1309,875,1348"/>
+<area shape="rect" id="node29" href="https://gitlab.com/help/user/project/issues/index.md" title="issue" alt="" coords="927,1404,999,1442"/>
+<area shape="rect" id="node30" href="https://gitlab.com/help/user/project/wiki/index.md" title="wiki" alt="" coords="927,1278,999,1317"/>
+<area shape="rect" id="node31" href="https://gitlab.com/help/user/discussions/index.md" title="commit comments" alt="" coords="898,1341,1028,1380"/>
+<area shape="rect" id="node41" href="#" title="ch05\ntext" alt="" coords="803,1102,875,1142"/>
+<area shape="rect" id="node34" href="https://docs.python.org/3.7/library/logging.html#handler-objects" title="file\nHandler" alt="" coords="927,640,999,680"/>
+<area shape="rect" id="node35" href="https://docs.python.org/3.7/library/logging.html#levels" title="Bug Level" alt="" coords="921,577,1004,616"/>
+<area shape="rect" id="node36" href="#" title="CRITICAL" alt="" coords="1051,514,1140,553"/>
+<area shape="rect" id="node37" href="#" title="ERROR" alt="" coords="1060,577,1132,616"/>
+<area shape="rect" id="node38" href="#" title="WARNING" alt="" coords="1050,640,1141,678"/>
+<area shape="rect" id="node39" href="#" title="INFO" alt="" coords="1060,702,1132,741"/>
+<area shape="rect" id="node40" href="#" title="DEBUG" alt="" coords="1060,452,1132,490"/>
+<area shape="rect" id="node42" href="https://en.wikipedia.org/wiki/Comma-separated_values" title="csv" alt="" coords="927,1090,999,1129"/>
+<area shape="rect" id="node43" href="https://docs.python.org/3/library/stdtypes.html?highlight=dict#dict" title="dict" alt="" coords="927,1153,999,1192"/>
+<area shape="rect" id="node44" href="https://docs.python.org/3.7/library/pickle.html" title="pickle" alt="" coords="927,1216,999,1254"/>
+<area shape="rect" id="node45" href="#" title="ch06\nweb" alt="" coords="927,1026,999,1066"/>
+<area shape="rect" id="node47" href="https://en.wikipedia.org/wiki/World_Wide_Web" title="web" alt="" coords="1164,1061,1236,1100"/>
+<area shape="rect" id="node52" href="https://en.wikipedia.org/wiki/Web_framework" title="framework" alt="" coords="1258,776,1344,814"/>
+<area shape="rect" id="node61" href="#" title="ch07\nlogging" alt="" coords="1060,1026,1132,1066"/>
+<area shape="rect" id="node48" href="https://www.w3schools.com/Css/" title="css" alt="" coords="1265,1177,1337,1216"/>
+<area shape="rect" id="node49" href="https://www.w3schools.com/html/" title="html" alt="" coords="1265,1052,1337,1090"/>
+<area shape="rect" id="node50" href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript" alt="" coords="1260,1114,1342,1153"/>
+<area shape="rect" id="node51" href="https://en.wikipedia.org/wiki/Representational_state_transfer" title="RESTful" alt="" coords="1264,858,1338,897"/>
+<area shape="rect" id="node53" href="https://bottlepy.org/" title="bottle" alt="" coords="1367,692,1439,730"/>
+<area shape="rect" id="node54" href="http://flask.pocoo.org/" title="flask" alt="" coords="1367,817,1439,856"/>
+<area shape="rect" id="node55" href="https://www.djangoproject.com/" title="django" alt="" coords="1367,754,1439,793"/>
+<area shape="rect" id="node56" href="https://bottlepy.org/docs/dev/routing.html" title="route" alt="" coords="1472,557,1544,596"/>
+<area shape="rect" id="node57" href="#" title="get" alt="" coords="1472,620,1544,658"/>
+<area shape="rect" id="node58" href="#" title="post" alt="" coords="1472,682,1544,721"/>
+<area shape="rect" id="node62" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="http" alt="" coords="1164,1240,1236,1278"/>
+<area shape="rect" id="node65" href="#" title="ch08\nSaaS" alt="" coords="1164,988,1236,1028"/>
+<area shape="rect" id="node63" href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator" title="url" alt="" coords="1265,1302,1337,1341"/>
+<area shape="rect" id="node64" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="uri" alt="" coords="1265,1240,1337,1278"/>
+<area shape="rect" id="node66" href="https://en.wikipedia.org/wiki/Software_as_a_service" title="SaaS" alt="" coords="1265,534,1337,573"/>
+<area shape="rect" id="node83" href="#" title="ch09\nAPI" alt="" coords="1265,987,1337,1027"/>
+<area shape="rect" id="node67" href="http://www.sinacloud.com/sae.html" title="SAE" alt="" coords="1367,441,1439,480"/>
+<area shape="rect" id="node68" href="https://aws.amazon.com" title="AWS" alt="" coords="1367,504,1439,542"/>
+<area shape="rect" id="node69" href="#" title="..." alt="" coords="1367,566,1439,605"/>
+<area shape="rect" id="node70" href="https://www.heroku.com/" title="Heroku" alt="" coords="1367,274,1439,313"/>
+<area shape="rect" id="node71" href="https://github.com/heroku/cli" title="Heroku&#45;CLI" alt="" coords="1461,368,1555,406"/>
+<area shape="rect" id="node73" href="https://en.wikipedia.org/wiki/NoSQL" title="NoSQL" alt="" coords="1472,242,1544,281"/>
+<area shape="rect" id="node76" href="https://en.wikipedia.org/wiki/Relational_database_management_system" title="RDBMS" alt="" coords="1472,117,1545,156"/>
+<area shape="rect" id="node80" href="https://www.computerhope.com/unix/uenv.htm" title="ENV" alt="" coords="1472,180,1544,218"/>
+<area shape="rect" id="node81" href="https://gunicorn.org/" title="gunicorn" alt="" coords="1471,305,1545,344"/>
+<area shape="rect" id="node72" href="https://redis.io/" title="redis" alt="" coords="1588,305,1660,344"/>
+<area shape="rect" id="node74" href="https://www.mongodb.com/" title="MongoDB" alt="" coords="1582,180,1666,218"/>
+<area shape="rect" id="node75" href="http://couchdb.apache.org/" title="CouchDB" alt="" coords="1584,242,1664,281"/>
+<area shape="rect" id="node77" href="https://www.mysql.com/" title="MySQL" alt="" coords="1588,54,1660,93"/>
+<area shape="rect" id="node78" href="https://www.postgresql.org/" title="PostgreSQL" alt="" coords="1578,117,1671,156"/>
+<area shape="rect" id="node79" href="https://www.w3schools.com/sql/" title="SQL" alt="" coords="1710,86,1782,125"/>
+<area shape="rect" id="node84" href="https://mp.weixin.qq.com/" title="微信" alt="" coords="1367,1198,1439,1237"/>
+<area shape="rect" id="node87" href="https://slack.com/features" title="Slack" alt="" coords="1367,1102,1439,1141"/>
+<area shape="rect" id="node93" href="#" title="ch10\nMVP" alt="" coords="1367,880,1439,920"/>
+<area shape="rect" id="node85" href="https://developers.weixin.qq.com/miniprogram/dev/index.html" title="小应用" alt="" coords="1472,1189,1544,1228"/>
+<area shape="rect" id="node86" href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" title="公众平台" alt="" coords="1468,1252,1548,1290"/>
+<area shape="rect" id="node88" href="https://api.slack.com/tutorials/slack-apps-and-postman" title="Slack app" alt="" coords="1469,1074,1548,1113"/>
+<area shape="rect" id="node89" href="https://api.slack.com/slash-commands" title="/Commands" alt="" coords="1462,1012,1554,1050"/>
+<area shape="rect" id="node94" href="http://www.qpython.com/" title="qpython" alt="" coords="1472,808,1544,846"/>
+<area shape="rect" id="node98" href="#" title="ch11\nCI" alt="" coords="1472,871,1544,911"/>
+<area shape="rect" id="node95" href="https://www.tutorialspoint.com/sl4a/" title="SL4A" alt="" coords="1588,465,1660,504"/>
+<area shape="rect" id="node99" href="https://en.wikipedia.org/wiki/DevOps" title="DevOps" alt="" coords="1588,528,1660,566"/>
+<area shape="rect" id="node110" href="#" title="ch12\n探索" alt="" coords="1588,732,1660,778"/>
+<area shape="rect" id="node100" href="https://en.wikipedia.org/wiki/Continuous_Integration" title="CI" alt="" coords="1710,528,1782,566"/>
+<area shape="rect" id="node104" href="https://en.wikipedia.org/wiki/Continuous_delivery" title="CD" alt="" coords="1710,309,1782,348"/>
+<area shape="rect" id="node109" href="https://gitlab.com/help/ci/README.md" title="GitLab CI/CD" alt="" coords="1693,465,1799,504"/>
+<area shape="rect" id="node101" href="https://travis-ci.org/" title="Travis CI" alt="" coords="1827,497,1903,536"/>
+<area shape="rect" id="node102" href="https://jenkins.io/" title="Jenkins" alt="" coords="1829,560,1901,598"/>
+<area shape="rect" id="node103" href="https://bitten.edgewall.org/" title="Bitten" alt="" coords="1829,434,1901,473"/>
+<area shape="rect" id="node105" href="https://www.ansible.com/" title="Ansible" alt="" coords="1829,246,1901,285"/>
+<area shape="rect" id="node106" href="https://www.chef.io/chef/" title="Chef" alt="" coords="1829,309,1901,348"/>
+<area shape="rect" id="node107" href="https://puppet.com/" title="Puppet" alt="" coords="1829,372,1901,410"/>
+<area shape="rect" id="node108" href="http://www.fabfile.org/" title="Fabric" alt="" coords="1829,184,1901,222"/>
+<area shape="rect" id="node111" href="https://www.docker.com/" title="Docker" alt="" coords="1710,685,1782,724"/>
+<area shape="rect" id="node114" href="https://en.wikipedia.org/wiki/Artificial_intelligence" title="AI" alt="" coords="1710,798,1782,837"/>
+<area shape="rect" id="node118" href="https://en.wikipedia.org/wiki/Graphical_user_interface" title="GUI" alt="" coords="1710,1030,1782,1069"/>
+<area shape="rect" id="node124" href="#" title="发行版" alt="" coords="1710,1374,1782,1413"/>
+<area shape="rect" id="node112" href="https://www.vagrantup.com/" title="Vagrant" alt="" coords="1829,685,1901,724"/>
+<area shape="rect" id="node113" href="https://www.virtualbox.org/" title="VirtualBox" alt="" coords="1822,622,1908,661"/>
+<area shape="rect" id="node115" href="https://www.kaggle.com/" title="Kaggle" alt="" coords="1829,748,1901,786"/>
+<area shape="rect" id="node116" href="https://keras.io/" title="Keras" alt="" coords="1829,810,1901,849"/>
+<area shape="rect" id="node117" href="https://pytorch.org/" title="PyTorch" alt="" coords="1829,873,1901,912"/>
+<area shape="rect" id="node119" href="https://wiki.python.org/moin/PyQt" title="PyQt" alt="" coords="1829,998,1901,1037"/>
+<area shape="rect" id="node120" href="https://wiki.python.org/moin/TkInter" title="tkinter" alt="" coords="1829,1061,1901,1100"/>
+<area shape="rect" id="node121" href="http://www.pygame.org/" title="PyGame" alt="" coords="1829,1124,1901,1162"/>
+<area shape="rect" id="node122" href="https://kivy.org/" title="kivy" alt="" coords="1829,1186,1901,1225"/>
+<area shape="rect" id="node123" href="https://github.com/flexxui/flexx" title="Flexx" alt="" coords="1829,936,1901,974"/>
+<area shape="rect" id="node125" href="https://www.pypy.org/" title="PyPy" alt="" coords="1829,1500,1901,1538"/>
+<area shape="rect" id="node126" href="https://github.com/stackless-dev/stackless/wiki" title="stackless" alt="" coords="1828,1562,1902,1601"/>
+<area shape="rect" id="node127" href="https://conda.io/miniconda.html" title="miniconda" alt="" coords="1823,1249,1907,1288"/>
+<area shape="rect" id="node128" href="https://www.anaconda.com/what-is-anaconda/" title="anaconda" alt="" coords="1827,1312,1903,1350"/>
+<area shape="rect" id="node129" href="http://www.jython.org/" title="jython" alt="" coords="1829,1374,1901,1413"/>
+<area shape="rect" id="node130" href="https://cython.org/" title="Cython" alt="" coords="1829,1437,1901,1476"/>
+<area shape="poly" id="node131" href="mailto:pythonicamp@googlegroups.com?subject=[101 mapping] " title="邮件吼俺" alt="" coords="118,710,116,703,108,697,95,692,79,689,62,688,44,689,29,692,16,697,8,703,5,710,8,717,16,723,29,728,44,731,62,732,79,731,95,728,108,723,116,717"/>
+<area shape="poly" id="node132" href="https://gitlab.com/pythonicamp" title="返回\n" alt="" coords="98,778,96,771,91,765,83,760,73,757,62,756,51,757,41,760,33,765,28,771,26,778,28,785,33,791,41,796,51,799,62,800,73,799,83,796,91,791,96,785"/>
+</map>

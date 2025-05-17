@@ -1,0 +1,113 @@
+    /*生成命令:
+$ dot -Tpng mf_mobi_shell.dot -o mf_mobi_shell.png
+
+ -Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+        ,fontname="WenQuanYi Micro Hei"
+    */
+
+digraph G4_mf_mobi_shell {
+    /*全局设定*/
+    graph [label="含桌面的手机壳-技术方案{流程图}"
+        ,fontsize=14.0
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=TB
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+*/
+
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+
+    /*图例关系
+    srvPUB->installer [label="2.0",style="dotted"];
+    */
+
+subgraph cluster_shell {
+    label = "手机壳";
+    NFC [label="近场感应"];
+}
+NFC->APP_NFC [label="2.0",style="dotted,setlinewidth(2)"];
+
+subgraph cluster_mobi {
+    label = "手机";
+
+    APP_NFC [label="专用感应App"];
+    APP_CHK [label="桌面问询器"];
+    APP_DL [label="桌面下载器"];
+    APP_CFG [label="桌面配置器"];
+
+    APP_NFC->APP_CHK [label="2.1",style="setlinewidth(2)"];
+
+    APP_DL->APP_CFG [label="4.1",style="setlinewidth(1)"];
+}
+APP_DL->SRV_REPO [label="4.0",style="dashed,setlinewidth(1)"];
+
+APP_CHK->SRV_API [label="2.2",style="dotted,setlinewidth(2)"];
+SRV_ECHO->APP_DL [label="3.3",style="dashed"];
+
+start->NFC [label="1.0",style="setlinewidth(2.5)"];
+    APP_CFG->end [label="5.0",style="setlinewidth(2.5)"];
+
+subgraph cluster_srv {
+    label = "云端服务";
+
+    SRV_API [label="查询接口"];
+    SRV_REPO [label="桌面库", shape=box3d];
+    SRV_CHK [label="激活检验器"];
+    SRV_ECHO [label="下载回响器"];
+
+    SRV_API->SRV_CHK [label="3.0"];
+    SRV_CHK->SRV_REPO [label="3.1"];
+    SRV_CHK->SRV_ECHO [label="3.2"];
+}
+
+
+/*
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

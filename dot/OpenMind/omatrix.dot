@@ -1,0 +1,106 @@
+    /*生成命令:
+$ dot -Tpng omatrix.dot -o omatrix.png 
+-Tcmapx -o omatrix.map
+    全局设定
+plaintext
+    */
+
+digraph omatrix {
+    /*全局设定*/
+    graph [label="开智体系\n{150429 by ZQ powered by Graphviz}"
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="r",labelloc="b"
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=LR
+        ,bgcolor="#333333"
+        ,fontname="YaHei Consolas Hybrid"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333"
+        ,color=gray,fontcolor=snow
+        ,shape=tab
+        ,fontname="YaHei Consolas Hybrid"
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=snow
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ,fontname="WenQuanYi Micro Hei"
+        ];
+
+/*
+        ,fontname="WenQuanYi Micro Hei"
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+*/
+
+
+    OM [label="开智"];
+
+        OMWB [label="微播"];
+            OMBO [label="出版"];
+            OMPO [label="播客"];
+            OMTO [label="工具"];
+        OMCO [label="学院"];
+        OMVR [label="虚拟现实"];
+
+    omBR [label="衍生"];
+    omFLY [label="飞行之旅"];
+    omYC [label="富二创新"];
+
+
+    OM->{OMWB OMCO OMVR};
+        OMWB->{OMBO OMTO OMPO};
+
+    OM->omBR->{omFLY omYC};
+
+
+/*
+开智微播：创新者背后的创新者
+
+开智学院：创新者学院
+开智出版：为创新者提供智力源泉 
+开智播客：诺奖得主等伟大创新者教你创新
+开智工具：加速创意
+虚拟现实：面向未来的创新内容生产
+
+吉波主打的创新飞行之旅、颖生主打的富二代创新者训练营。
+
+        ET->v_SD_a1 [label="实时转换", color=red,style="dotted,setlinewidth(2)"];
+        v_SD_a1->S3 [label="动态插入", color=red,style="dotted,setlinewidth(2)"];
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

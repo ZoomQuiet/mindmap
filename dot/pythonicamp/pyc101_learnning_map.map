@@ -1,0 +1,95 @@
+<map id="pyc101_learnning_map" name="pyc101_learnning_map">
+<area shape="rect" id="node1" href="https://gitlab.com/pythonicamp" title="蠎营\nPythoniCamp" alt="" coords="141,655,243,701"/>
+<area shape="rect" id="node2" href="#" title="ch00\n周蠎" alt="" coords="304,655,376,701"/>
+<area shape="rect" id="node3" href="#" title="Python 2.7" alt="" coords="398,333,483,372"/>
+<area shape="rect" id="node6" href="#" title="ch01\nCLI" alt="" coords="405,716,477,756"/>
+<area shape="rect" id="node4" href="#" title="zhpy" alt="" coords="614,237,686,276"/>
+<area shape="rect" id="node5" href="#" title="pip" alt="" coords="512,333,584,372"/>
+<area shape="rect" id="node13" href="#" title="Click" alt="" coords="614,514,686,553"/>
+<area shape="rect" id="node32" href="#" title="logging" alt="" coords="803,442,875,481"/>
+<area shape="rect" id="node58" href="#" title="request" alt="" coords="1472,305,1544,344"/>
+<area shape="rect" id="node7" href="#" title="shell " alt="" coords="1164,1261,1236,1300"/>
+<area shape="rect" id="node12" href="#" title="Python 3.7" alt="" coords="506,645,591,684"/>
+<area shape="rect" id="node18" href="#" title="ch02\nhelp" alt="" coords="512,788,584,828"/>
+<area shape="rect" id="node8" href="#" title="bash &#160;" alt="" coords="1265,1292,1337,1330"/>
+<area shape="rect" id="node9" href="#" title="zsh &#160;&#160;" alt="" coords="1265,1354,1337,1393"/>
+<area shape="rect" id="node17" href="#" title="terminal" alt="" coords="1265,1229,1337,1268"/>
+<area shape="rect" id="node10" href="#" title="iterm2" alt="" coords="1367,1198,1439,1237"/>
+<area shape="rect" id="node11" href="#" title="cmder " alt="" coords="1367,1261,1439,1300"/>
+<area shape="rect" id="node14" href="#" title="stdin" alt="" coords="708,514,780,553"/>
+<area shape="rect" id="node15" href="#" title="stdout" alt="" coords="708,577,780,616"/>
+<area shape="rect" id="node16" href="#" title="stderr" alt="" coords="708,452,780,490"/>
+<area shape="rect" id="node45" href="#" title="curl" alt="" coords="1367,1136,1439,1174"/>
+<area shape="rect" id="node88" href="https://api.slack.com/tutorials/tunneling-with-ngrok" title="ngrok" alt="" coords="1472,1258,1544,1297"/>
+<area shape="rect" id="node89" href="#" title="tmux" alt="" coords="1367,1376,1439,1414"/>
+<area shape="rect" id="node19" href="#" title="print()" alt="" coords="614,820,686,858"/>
+<area shape="rect" id="node21" href="#" title="doc()" alt="" coords="614,882,686,921"/>
+<area shape="rect" id="node22" href="#" title="help()" alt="" coords="614,945,686,984"/>
+<area shape="rect" id="node23" href="#" title="dir()" alt="" coords="614,692,686,730"/>
+<area shape="rect" id="node24" href="#" title="ch03\ngit" alt="" coords="614,755,686,795"/>
+<area shape="rect" id="node20" href="#" title="format()" alt="" coords="708,833,780,872"/>
+<area shape="rect" id="node25" href="#" title="git" alt="" coords="708,770,780,809"/>
+<area shape="rect" id="node31" href="#" title="ch04\npip" alt="" coords="708,655,780,695"/>
+<area shape="rect" id="node26" href="#" title="github" alt="" coords="803,884,875,922"/>
+<area shape="rect" id="node27" href="#" title="gitlab" alt="" coords="803,821,875,860"/>
+<area shape="rect" id="node28" href="#" title="issue" alt="" coords="927,884,999,922"/>
+<area shape="rect" id="node29" href="#" title="wiki" alt="" coords="927,946,999,985"/>
+<area shape="rect" id="node30" href="#" title="commit comments" alt="" coords="898,821,1028,860"/>
+<area shape="rect" id="node40" href="#" title="ch05\ntext" alt="" coords="803,655,875,695"/>
+<area shape="rect" id="node33" href="#" title="file\nHandler" alt="" coords="927,418,999,458"/>
+<area shape="rect" id="node34" href="#" title="Bug Level" alt="" coords="921,482,1004,521"/>
+<area shape="rect" id="node35" href="#" title="CRITICAL" alt="" coords="1051,357,1140,396"/>
+<area shape="rect" id="node36" href="#" title="ERROR" alt="" coords="1060,420,1132,458"/>
+<area shape="rect" id="node37" href="#" title="WARNING" alt="" coords="1050,482,1141,521"/>
+<area shape="rect" id="node38" href="#" title="INFO" alt="" coords="1060,545,1132,584"/>
+<area shape="rect" id="node39" href="#" title="DEBUG" alt="" coords="1060,608,1132,646"/>
+<area shape="rect" id="node41" href="#" title="csv" alt="" coords="927,758,999,797"/>
+<area shape="rect" id="node42" href="#" title="dict" alt="" coords="927,568,999,606"/>
+<area shape="rect" id="node43" href="#" title="pickle" alt="" coords="927,630,999,669"/>
+<area shape="rect" id="node44" href="#" title="ch06\nweb" alt="" coords="927,694,999,734"/>
+<area shape="rect" id="node46" href="#" title="web" alt="" coords="1164,702,1236,741"/>
+<area shape="rect" id="node51" href="#" title="framework" alt="" coords="1258,453,1344,492"/>
+<area shape="rect" id="node60" href="#" title="ch07\nlogging" alt="" coords="1060,779,1132,819"/>
+<area shape="rect" id="node47" href="#" title="css" alt="" coords="1265,597,1337,636"/>
+<area shape="rect" id="node48" href="#" title="html" alt="" coords="1265,660,1337,698"/>
+<area shape="rect" id="node49" href="#" title="JavaScript" alt="" coords="1260,722,1342,761"/>
+<area shape="rect" id="node50" href="#" title="RESTful" alt="" coords="1264,534,1338,573"/>
+<area shape="rect" id="node52" href="#" title="bottle" alt="" coords="1367,401,1439,440"/>
+<area shape="rect" id="node53" href="#" title="flask" alt="" coords="1367,548,1439,586"/>
+<area shape="rect" id="node54" href="#" title="django" alt="" coords="1367,470,1439,509"/>
+<area shape="rect" id="node55" href="#" title="route" alt="" coords="1472,497,1544,536"/>
+<area shape="rect" id="node56" href="#" title="get" alt="" coords="1472,622,1544,661"/>
+<area shape="rect" id="node57" href="#" title="post" alt="" coords="1472,368,1544,406"/>
+<area shape="rect" id="node61" href="#" title="http" alt="" coords="1164,785,1236,824"/>
+<area shape="rect" id="node64" href="#" title="ch08\nSaaS" alt="" coords="1164,910,1236,950"/>
+<area shape="rect" id="node62" href="#" title="url" alt="" coords="1265,785,1337,824"/>
+<area shape="rect" id="node63" href="#" title="uri" alt="" coords="1265,848,1337,886"/>
+<area shape="rect" id="node65" href="#" title="SaaS" alt="" coords="1265,910,1337,949"/>
+<area shape="rect" id="node81" href="#" title="ch09\nAPI" alt="" coords="1265,984,1337,1024"/>
+<area shape="rect" id="node66" href="#" title="SAE" alt="" coords="1367,757,1439,796"/>
+<area shape="rect" id="node67" href="#" title="AWS" alt="" coords="1367,820,1439,858"/>
+<area shape="rect" id="node68" href="#" title="GAE" alt="" coords="1367,882,1439,921"/>
+<area shape="rect" id="node69" href="#" title="..." alt="" coords="1367,632,1439,670"/>
+<area shape="rect" id="node70" href="#" title="Heroku" alt="" coords="1367,694,1439,733"/>
+<area shape="rect" id="node71" href="#" title="Heroku&#45;CLI" alt="" coords="1461,693,1555,732"/>
+<area shape="rect" id="node72" href="#" title="redis" alt="" coords="1472,180,1544,218"/>
+<area shape="rect" id="node78" href="#" title="PostgreSQL" alt="" coords="1462,560,1555,598"/>
+<area shape="rect" id="node80" href="#" title="ENV" alt="" coords="1472,756,1544,794"/>
+<area shape="rect" id="node73" href="#" title="NoSQL" alt="" coords="1367,117,1439,156"/>
+<area shape="rect" id="node74" href="#" title="MongoDB" alt="" coords="1466,117,1550,156"/>
+<area shape="rect" id="node75" href="#" title="CouchDB" alt="" coords="1468,54,1548,93"/>
+<area shape="rect" id="node76" href="#" title="RMDB" alt="" coords="1367,242,1439,281"/>
+<area shape="rect" id="node77" href="#" title="MySQL" alt="" coords="1472,242,1544,281"/>
+<area shape="rect" id="node79" href="#" title="SQL" alt="" coords="1578,401,1650,440"/>
+<area shape="rect" id="node82" href="https://mp.weixin.qq.com/" title="微信" alt="" coords="1367,1010,1439,1049"/>
+<area shape="rect" id="node85" href="https://slack.com/features" title="Slack" alt="" coords="1367,1073,1439,1112"/>
+<area shape="rect" id="node90" href="#" title="ch10\nMVP" alt="" coords="1367,946,1439,986"/>
+<area shape="rect" id="node83" href="https://developers.weixin.qq.com/miniprogram/dev/index.html" title="小应用" alt="" coords="1472,1010,1544,1049"/>
+<area shape="rect" id="node84" href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" title="公众平台" alt="" coords="1468,948,1548,986"/>
+<area shape="rect" id="node86" href="https://api.slack.com/tutorials/slack-apps-and-postman" title="Slack app" alt="" coords="1469,1073,1548,1112"/>
+<area shape="rect" id="node87" href="https://api.slack.com/slash-commands" title="/Commands" alt="" coords="1462,1136,1554,1174"/>
+<area shape="rect" id="node91" href="#" title="ch11\nCI" alt="" coords="1472,883,1544,923"/>
+<area shape="rect" id="node92" href="#" title="ch12\n探索" alt="" coords="1578,880,1650,926"/>
+<area shape="poly" id="node93" href="mailto:pythonicamp@googlegroups.com?subject=[101 mapping] " title="邮件吼俺" alt="" coords="118,643,116,636,108,630,95,625,79,622,62,621,44,622,29,625,16,630,8,636,5,643,8,650,16,656,29,661,44,664,62,665,79,664,95,661,108,656,116,650"/>
+<area shape="poly" id="node94" href="https://gitlab.com/pythonicamp" title="返回\n" alt="" coords="98,711,96,704,91,698,83,693,73,690,62,689,51,690,41,693,33,698,28,704,26,711,28,718,33,724,41,729,51,732,62,733,73,732,83,729,91,724,96,718"/>
+</map>

@@ -1,0 +1,131 @@
+    /*生成命令:
+$ dot -Tpng lbs_speed_express.dot -o lbs_speed_express.png
+
+ -Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+        ,fontname="WenQuanYi Micro Hei"
+    */
+
+digraph G4_lbs_speed_express {
+    /*全局设定*/
+    graph [label="提高快递效率的系统-技术方案{流程图}"
+        ,fontsize=14.0
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=TB
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+*/
+
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    /*图例关系
+    srvPUB->installer [label="2.0"];
+    ,style="dotted"
+    ,style="dashed"
+    ,style="setlinewidth(2)"
+    */
+
+start->EXP_LBS [label="1.0"];
+{EXP_MAP USR_MAP}->end;
+
+subgraph cluster_user {
+    label = "用户手机";
+    USR_App [label="专用App"];
+    USR_AWD [label="促单小费"];
+    USR_MAP [label="时况地图"];
+
+    USR_App->USR_MAP [label="2.5\n5.0"];
+
+    USR_App->USR_AWD [label="3.0"];
+
+}
+
+USR_App->SRV_API [label="2.0"];
+USR_AWD->SRV_API [label="3.1"];
+
+SRV_MEG->USR_App [label="2.4\n4.5"];
+
+subgraph cluster_dispatch {
+    label = "调度服务";
+
+    SRV_API [label="服务接口"];
+    SRV_PUB [label="广播接口"];
+    SRV_REPO [label="快递单库", shape=box3d];
+    SRV_MAP [label="路线地图", shape=box3d];
+
+    SRV_ECHO [label="调度员", shape=tab];
+    SRV_MEG [label="快递实况"];
+
+    SRV_API->{SRV_MAP SRV_REPO} [label="1.2\n2.1\n3.2\n4.2"];
+
+    {SRV_MAP SRV_REPO}->SRV_ECHO [label="2.2\n3.3\n4.3"];
+
+    EXP_MSG [label="调度提醒"];
+
+    SRV_ECHO->SRV_PUB [label="3.4"];
+    SRV_PUB->EXP_MSG [label="3.5"];
+    SRV_ECHO->SRV_MEG [label="2.3\n4.4"];
+/*
+    SRV_PUB->SRV_MEG [label="3.3"];
+*/
+}
+
+
+EXP_LBS->SRV_API [label="1.1"];
+EXP_AWD->SRV_API [label="4.1"];
+
+subgraph cluster_exper {
+    label = "快递员手机";
+
+    EXP_APP [label="专用调度App"];
+    EXP_LBS [label="LBS服务"];
+    EXP_MAP [label="调度地图"];
+    EXP_AWD [label="上门抢单"];
+
+    EXP_MSG->EXP_APP [label="3.6"];
+    EXP_APP->EXP_MAP [label="3.7"];
+
+    EXP_APP->EXP_AWD [label="4.0"];
+}
+
+
+/*
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+        EXP_LBS->SRV_ECHO;
+*/
+    edge [style=invis];
+}
+

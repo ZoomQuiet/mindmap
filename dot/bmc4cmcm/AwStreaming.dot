@@ -1,0 +1,130 @@
+    /*生成命令:
+$ dot -Tpng AwStreaming.dot -o AwStreaming.png 
+-Tcmapx -o AwStreaming.map
+    全局设定
+plaintext
+    */
+
+digraph AwStreaming {
+    /*全局设定*/
+    graph [label="AWStreaming mapping\n{150423 by ZQ powered by Graphviz}"
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="l",labelloc="t"
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=BT
+        ,bgcolor="#333333"
+        ,fontname="YaHei Consolas Hybrid"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333"
+        ,color=gray,fontcolor=snow
+        ,shape=component
+        ,fontname="YaHei Consolas Hybrid"
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=snow
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ,fontname="WenQuanYi Micro Hei"
+        ];
+
+/*
+        ,fontname="WenQuanYi Micro Hei"
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+*/
+
+
+    user         [label="user\nmobile client",shape=egg];
+
+    ELB [label="ELB"];
+
+
+    ET [label="Elastic Transcoder"];
+    CF [label="CloudFront"];
+    
+    S3 [label="S3", shape=box3d];
+
+    cloudbak [label="EC2\ncontrol srv."
+        ,URL="http://bmc.gzcmcm.com/doc/cloudbak/README.html"];
+    bmts [label="EC2\nbmts"
+        ,URL="http://bmc.gzcmcm.com/doc/bmts/README.html"
+        ,style="setlinewidth(1.5)"];
+
+    /*图例关系
+    srvPUB->installer [label="2.0",style="dotted"];
+    APP_NFC->APP_CHK [label="2.1",style="setlinewidth(2)"];
+SRV_ECHO->APP_DL [label="3.3",style="dashed"];
+    */
+
+    user->v_orig->ELB [label="upload", color=cyan,style="setlinewidth(2)"];
+        ELB->bmts [label="V2 API",color=cyan,style="setlinewidth(2)"];
+            bmts->S3 [label="upload", color=cyan,style="setlinewidth(2)"];
+            bmts->cloudbak;
+    S3->ET->S3 [label="转码", style="setlinewidth(2)"];
+        S3->v_SD_HLS->CF [style="setlinewidth(2)"];
+        CF->user [label="playback", style="setlinewidth(2)"];
+
+    v_orig [label="原始HD视频", shape=note];
+/*
+    v_SD [label="SD视频", shape=note];
+*/
+    v_SD_HLS [label="HLS视频流\n.m3u8+.ts", shape=tab];
+
+    v_HD_f1 [label="HD视频\n头一分钟", shape=note];
+    v_SD_f1 [label="SD视频\n头一分钟", shape=note];
+    v_SD_a1 [label="SD视频\n一分之后", shape=note];
+
+    bmts->v_HD_f1 [label="cut/偏移\nLambda"
+        ,color=green,style="dashed,setlinewidth(1)"];
+    v_HD_f1->ET [label="转码"
+            ,color=green,style="dashed,setlinewidth(1)"];
+        ET->S3->v_SD_f1 [color=green,style="dashed,setlinewidth(1)"];
+
+
+    user->bmts->v_SD_f1 [label="回放",color=red,style="dotted,setlinewidth(2)"];
+        v_SD_f1->bmts [color=red,style="dotted,setlinewidth(2)"];
+        bmts->user [label="拼接播放",color=red,style="dotted,setlinewidth(2)"];
+    
+    bmts->ET [label="event\nLambda", color=red,style="dotted,setlinewidth(2)"];
+        ET->S3 [label="实时转换", color=red,style="dotted,setlinewidth(2)"];
+        S3->v_SD_a1->bmts[label="", color=red,style="dotted,setlinewidth(2)"];
+/*
+        ET->v_SD_a1 [label="实时转换", color=red,style="dotted,setlinewidth(2)"];
+        v_SD_a1->S3 [label="动态插入", color=red,style="dotted,setlinewidth(2)"];
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

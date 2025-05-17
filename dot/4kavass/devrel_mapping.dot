@@ -1,0 +1,143 @@
+digraph devrel_mapping {
+    /*生成命令:
+$ neato -Tpng devrel_mapping.dot -o devrel_mapping.png -Tcmapx -o devrel_mapping.map
+$ neato plaintext
+    全局设定
+    title [label="DevRel 思维导图 \n{gen. by Graphviz}\n2 simple, sometimes naïve."
+        URL="#"];
+    */
+    graph [label="DevRel 思维导图 {gen. by Graphviz}\n2 simple, sometimes naïve."
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="r",labelloc="t",center=1
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=BT
+        ,bgcolor="#333333"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333",color=gray,fontcolor=snow
+        ,shape=note
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=azure
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+
+    
+    
+    ZQ  [label="zoomquiet.io",shape=ellipse,style="dotted"
+        ,URL="http://zoomquiet.io"];
+
+    mailme [label="电俺",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="mailto:support@devrel.info?subject=DevRel mapping feedback"];
+
+    DEVREL      [label="DevRel.info\n社区关系思考",shape=box3d
+        ,URL="http://devrel.info/"];
+
+
+    /*
+        lpybook->rwp4l [label="",style="dashed,setlinewidth(1)"]
+        techbook->tpipy [label="0%",style="dotted,setlinewidth(0.5)"]
+    */
+
+    DEVREL->{DEFI};
+
+    DEFI  [label="概念",shape=tab];
+        community [label="社区"];
+        comm_prod [label="产品社区"];
+        comm_medi [label="媒体社区"];
+        comm_tech [label="技术社区"];
+        
+        culture  [label="文化",shape=tab];
+            Share [label="分享"];
+            Hacker [label="Hacker"];
+            COPYLEFT [label="COPYLEFT",shape=tab];
+            Laziness [label="懒惰"];
+            Impatience [label="急躁"];
+            Hubris [label="傲慢"];
+            
+        license  [label="许可证",shape=tab];
+            GPL [label="GPL"];
+            LGPL [label="LGPL"];
+            BSD [label="BSD"];
+            MPL [label="MPL"];
+            MIT [label="MIT"];
+            Apache [label="Apache"];
+
+    DEFI->{community comm_tech comm_medi comm_prod};
+        comm_tech->{culture license COMP MANA  RELA};
+            culture->{Share Hacker COPYLEFT Laziness Impatience Hubris};
+            license->{GPL LGPL BSD MPL MIT Apache};
+
+    COMP  [label="成分",shape=tab];
+       PEOPLE  [label="成员",shape=tab];
+            master [label="Mater"];
+            admin [label="Admin."];
+            devlop [label="Devloer"];
+            user [label="User"];
+            troll [label="troll"];
+            spam [label="spam"];
+            visit [label="Visitor"];
+       WORK  [label="作品",shape=tab];
+            repo [label="仓库"];
+            document [label="文档"];
+            release [label="发行版"];
+
+    COMP->{PEOPLE WORK RES};
+        PEOPLE->{master admin devlop user troll spam visit};
+        WORK->{repo document release};
+        RES->{domain dowload sns blog irc bbs wiki mailist};
+       RES  [label="资源",shape=tab];
+            domain [label="域名"];
+            dowload [label="下载"];
+            sns [label="SNS帐号"];
+            blog [label="Blog"];
+            irc [label="IRC"];
+            bbs [label="BBS"];
+            wiki [label="维基"];
+            mailist [label="列表"];
+
+    TOOL  [label="工具",shape=tab];
+            gmail [label="Gmail"];
+            github [label="github"];
+            bitb [label="bitbucket"];
+
+    TOOL->{gmail github bitb mailist wiki blog irc};
+
+    MANA  [label="管理",shape=tab];
+        originator [label="创始人"];
+        organiger [label="组织者"];
+        contributer [label="贡献者"];
+        volunteer [label="志愿者"];
+        events [label="活动"];
+        conference [label="会议"];
+        train [label="培训"];
+        race [label="竞赛"];
+        proj [label="项目"];
+
+        proj->TOOL;
+    MANA->{originator organiger culture};
+        organiger->{volunteer conference train race events};
+        originator->{contributer proj};
+
+    RELA  [label="关系",shape=tab];
+        c2b [label="商务"];
+        c2e [label="企业"];
+        c2c [label="学校"];
+        c2m [label="成员"];
+
+    RELA->{c2m c2c c2e c2b};
+
+
+    edge [style=invis];
+    {mailme ZQ}->DEVREL;
+    
+/*
+    title->ZQ;
+    mailme->OBP;
+*/
+
+}

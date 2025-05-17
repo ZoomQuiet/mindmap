@@ -1,0 +1,252 @@
+digraph G {
+    /*生成命令:
+$ dot -Tpng 040503-ZqNet.dot -o 040503-ZqNet.png 
+-Tcmapx -o zoomquiet_org_idx.map
+$ neato -Tpng idx-zoomquiet.dot -o idx-zoomquiet.png -Tcmapx -o idx-zoomquiet.map
+    全局设定
+    */
+/*版权标签*/    
+    subgraph cluster0 {
+        label = "Zoomq's Path Net\nLicense Under Creative Commons";
+        fontcolor=honeydew;fontname = "Helvetica";fontsize=18;
+        style=filled;color=darkgreen;
+        T->o;
+        T[label="Time is unimportant",fontcolor=floralwhite];
+        o[label="only life important!",fontcolor=floralwhite];        
+    }
+/*核心起点*/
+    subgraph cluster0 {
+        label = "Zoom.Quiet";
+        shape=septagon;style=filled;color=lightblue;    
+        BL->BR->BC[dir=both,arrowtail="odiamond"];
+        BL->BC[dir=both,arrowtail="odiamond"];    
+    }
+graph [size="20,35",ratio=compress,rankdir=LR];
+node[fontsize=10.0];
+edge [];
+
+BR->KEO;BL->KEO;
+/*运动区域*/
+BC->Cook;
+BC->OD;BC->S->OD;
+S->FoolBall;S->FreeFight;S->pingpang;S->Skate;S->Yuga;
+
+OD->Phil;OD->Math;OD->Phys;OD->Chem;OD->Chro;
+OD->Geog;OD->Biol;OD->Soci;OD->Pers;OD->Hist;
+
+/*艺术情感区域*/
+BR->PP;BR->MG;BR->MU;BR->AN;BR->SF;BR->LT;
+BR->War->SF;
+War->Phil;War->Math;War->Phys;War->Chem;War->Chro;
+War->Geog;War->Biol;War->Soci;War->Pers;War->Hist;
+War->weaponry->Tank;
+weaponry->Plane;weaponry->Soldiers;
+
+LT->poesy;LT->essay;LT->novel;LT->reportage;
+LT->NW->SF;
+
+PP->Cosplay;PP->OD;PP->Blog;
+PP->CG;PP->equip;
+equip->Digital->F100;equip->STL->"Phoenix 205E";
+
+MG->BL;MG->BR;
+MG->SF;
+MG->Phil;MG->Math;MG->Phys;MG->Chem;MG->Chro;
+MG->Geog;MG->Biol;MG->Soci;MG->Pers;MG->Hist;
+MG->AN;MG->Cosplay;
+
+AN->GHIBLI;AN->GONZO;AN->Gainax;
+GHIBLI->"Miyazaki Hayao";
+
+SF->BL;SF->BR;
+SF->LT;
+SF->SF;
+SF->Phil;SF->Math;SF->Phys;SF->Chem;SF->Chro;
+SF->Geog;SF->Biol;SF->Soci;SF->Pers;SF->Hist;
+SF->C;
+SF->MU;
+
+MU->Pop;MU->Rock;MU->NewAge;MU->O_S_T;
+MU->"R&B";MU->soul;MU->vocal;MU->celtic;
+O_S_T->"Yoko Kanno";O_S_T->"Joe Hisaishi";
+
+/*知识理性区域*/
+BL->L;BL->C
+BL->Phil;BL->Math;BL->Phys;BL->Chem;BL->Chro;
+BL->Geog;BL->Biol;BL->Soci;BL->Pers;BL->Hist;
+
+L->English;L->Japanese;
+L->Chinese;
+Chinese->LT;
+Chinese->Phil;Chinese->Soci;Chinese->Pers;BL->Hist;
+
+C->Phil;C->Math;C->Biol;C->Soci;
+C->FLOSS;C->XML;C->W;C->CG;C->MM;C->DB;C->P;C->SE;
+SE->XP;
+SE->Pattern;
+SE->reFactoring;
+SE->PM;
+PM->TW;PM->SS;
+PM->BugTracker;
+PM->NightyBuild;PM->reversion;
+reversion->CVS;reversion->SVN;
+NightyBuild->CVS;NightyBuild->SVN;
+
+CG->Adode;Adode->Photoshop;Adode->Illustrator;Adode->Acorbat->LaTeX;
+CG->Corel;Corel->CorelDraw;
+CG->Mma;Mma->Flash;Mma->Dreamwarer;Mma->Fireworks;
+CG->"3D";"3D"->Flash;"3D"->"3D Max";"3D"->Rhino;
+
+MM->Flash;MM->audio;MM->video;
+
+P->"c/c++";
+P->J->Eclipse;
+P->ED->Vi;ED->Emacs;
+P->IDE->Eclipse;
+P->GUI;
+P->SL;
+SL->scripts;
+    scripts[label="Awk&sed\nHaskell\nLua\nMozart-OZ\nRuby\nTk-Qt-GTK+\n..."];
+SL->Lisp->Emacs;
+SL->ASP;SL->PHP;
+SL->JS->HTML;SL->AS->Flash->Mma;
+SL->PY;
+
+W->SS->Soci;
+W->XML->WS;
+W->CMS->Si->Google->Gmail;
+W->HTML->GUI;
+CMS->Wiki;CMS->Gmail;CMS->Blog;CMS->SS;
+HTML->XHTML;HTML->DHTML;HTML->WML;HTML->CSS;
+
+SS->Wiki;SS->Blog;SS->YoYo;SS->BBS;SS->Links;
+SS->IM;
+IM->ims;
+    ims[label="MSN\nICQ\nYahoo\nUC\nJabber\nOICQ\n..."];
+
+FLOSS->LAMPs;
+FLOSS->GNU;
+FLOSS->LGPL;
+FLOSS->MZ;
+LAMPs->Linux->ReadHat->Fedora;
+Linux->inux;
+    inux[label="Mandrake\nGentoo\nDebian\nKnoppix\nCDlinux\n..."];
+LAMPs->AP;
+LAMPs->MySQL;LAMPs->PHP;LAMPs->Perl;
+LAMPs->PY;
+PY->ZO->Zope2->CMF->Plone;
+ZO->Zope3;
+ZO->ZODB;ZO->ZPT;ZO->Workflow;ZO->ContentObject;ZO->Internationalization;ZO->UserManagement;
+ZO->ExternalAccess;
+PY->XML;PY->IDE;
+PY->PEAK;PEAK->Twisted;
+PY->i18N->CJKCodecs;
+PY->TW;PY->Docutils->TW;PY->Docutils->reST;
+PY->mod_python->AP;
+PY->"4Suite"->XML;PY->Elements->XML;PY->PyXMLlib->XML;
+PY->Parse->SE;
+PY->PyUnit->PM;
+PY->NumPy->Math;
+
+PY->wxPython->GUI;PY->PyGame->GUI;
+PyGame->MM;
+
+AP->Avalon;AP->Cocoon;AP->httpd;AP->XML;
+AP->WS;WS->Soap;WS->Axis;
+AP->JAKARTA->J;
+JAKARTA->ant;JAKARTA->Jelly;JAKARTA->Lucene;JAKARTA->Maven;JAKARTA->tomcat;
+
+J->Jython;Jython->PY;
+
+DB->MySQL;DB->SQLite;
+DB->Text;
+DB->XML;
+
+Text->ST;
+ST->XML;
+ST->TeX->LaTeX;
+ST->reST;ST->Wiki;
+ST->TW;
+TW->Wiki;TW->LT;
+
+PHP->adodb;
+
+XML->Schema;
+XML->XSL;
+XML->XSLT;
+XML->EXSLT;
+XML->RSS;
+XML->XUL;
+XML->NXD;
+
+MZ->XUL;
+
+    /* 发源地，style=filled,color=gold,shape=egg */
+    BL[label="BrainLeft",style=filled,color=gold,shape=egg];
+    BR[label="BrainRight",style=filled,color=gold,shape=egg];
+    BC[label="BrainCerebel",style=filled,color=gold,shape=egg];
+    
+    KEO[label="KEO.org-2004",fontcolor=floralwhite,style=filled,color=darkslategray,shape=septagon];
+    
+    /* 小脑干线，style=filled,color=olivedrab1,shape=triangle */
+    OD[label="OutDoor",style=filled,color=olivedrab1,shape=triangle];
+    S[label="Sport",style=filled,color=olivedrab1,shape=triangle];
+    
+    /* 右脑艺术干线，style=filled,color=yellowgreen,shape=hexagon */
+    PP[label="Photography",style=filled,color=yellowgreen,shape=hexagon];
+    MG[label="Manga",style=filled,color=yellowgreen,shape=hexagon];
+    AN[label="Anime",style=filled,color=yellowgreen,shape=hexagon];
+    SF[label="ScienceFiction",style=filled,color=yellowgreen,shape=hexagon];
+    LT[label="Literature",style=filled,color=yellowgreen,shape=hexagon];
+    MU[label="Music",style=filled,color=yellowgreen,shape=hexagon];
+    NW[label="NetWrite",style=filled,color=yellowgreen,shape=hexagon];
+    
+    /* 学科干线，style=filled,color=mistyrose,shape=house */
+    Phil[label="Philosophy",    style=filled,color=mistyrose,shape=house];
+    Math[label="Mathematics",   style=filled,color=mistyrose,shape=house];
+    Phys[label="Physics",       style=filled,color=mistyrose,shape=house];
+    Chem[label="Chemistry",     style=filled,color=mistyrose,shape=house];
+    Chro[label="Chronometer",   style=filled,color=mistyrose,shape=house];
+    Geog[label="Geography",     style=filled,color=mistyrose,shape=house];
+    Biol[label="Biology",       style=filled,color=mistyrose,shape=house];
+    Soci[label="Sociology",     style=filled,color=mistyrose,shape=house];
+    Pers[label="Personality",   style=filled,color=mistyrose,shape=house];
+    Hist[label="Historiy",      style=filled,color=mistyrose,shape=house];
+    
+    /* 左脑科学干线，style=filled,color=moccasin,shape=ellipse */
+    L[label="Language",style=filled,color=moccasin,shape=ellipse];
+    C[label="Computer",style=filled,color=moccasin,shape=ellipse];
+    
+    W[label="Web",style=filled,color=moccasin,shape=ellipse];
+    War[label="WarArt",style=filled,color=moccasin,shape=ellipse];
+    WS[label="Web Services",style=filled,color=moccasin,shape=ellipse];
+    P[label="Programme",style=filled,color=moccasin,shape=ellipse];
+    SS[label="SocialitySoftware",style=filled,color=moccasin,shape=ellipse];
+    CG[label="ComputerGraphics",style=filled,color=moccasin,shape=ellipse];
+    MM[label="MultiMedia",style=filled,color=moccasin,shape=ellipse];
+    DB[label="DataBase",style=filled,color=moccasin,shape=ellipse];
+    ST[label="StructureText",style=filled,color=moccasin,shape=ellipse];
+    TW[label="TechnicWrite",style=filled,color=moccasin,shape=ellipse];
+    SL[label="ScriptingLanguage",style=filled,color=moccasin,shape=ellipse];
+    ED[label="ProgrammeEditor",style=filled,color=moccasin,shape=ellipse];
+    MZ[label="Mozilla.org",style=filled,color=moccasin,shape=ellipse];
+    AP[label="Apache.org",style=filled,color=moccasin,shape=ellipse];
+    SE[label="SoftwareEngineering",style=filled,color=moccasin,shape=ellipse];
+    
+    PM[label="ProjectManage",style=filled,color=moccasin,shape=ellipse];
+    J[label="JAVA",style=filled,color=moccasin,shape=ellipse];
+    JS[label="J/JavaScript",style=filled,color=moccasin,shape=ellipse];
+    AS[label="ActionScript",style=filled,color=moccasin,shape=ellipse];
+    Mma[label="ActionScript",style=filled,color=moccasin,shape=ellipse];
+    Si[label="SearchEngine",style=filled,color=moccasin,shape=ellipse];
+    
+    PY[label="Python",fontcolor=floralwhite,style=filled,color=orangered3,shape=ellipse];
+    ZO[label="Zope",style=filled,color=moccasin,shape=ellipse];
+    
+    IDE[style=filled,color=moccasin,shape=ellipse];
+    GUI[style=filled,color=moccasin,shape=ellipse];
+    FLOSS[style=filled,color=moccasin,shape=ellipse];
+    LAMPs[style=filled,color=moccasin,shape=ellipse];
+    PHP[style=filled,color=moccasin,shape=ellipse];
+    XML[style=filled,color=moccasin,shape=ellipse];
+}

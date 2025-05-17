@@ -1,0 +1,27 @@
+<map id="obp_zoomquiet_org_idx" name="obp_zoomquiet_org_idx">
+<area shape="rect" id="node1" href="https://bitbucket.org/ZoomQuiet/tangle/src/f7d3402616263fe1ba3b9fd360c623e257349f1d/dot/zoomquiet.org/obp_zoomquiet_org_idx.dot" title="obp.zoomquiet.org 图书索引 \n{gen. by Graphviz}\nTime is unimportant,only life important!" alt="" coords="510,407,782,467"/>
+<area shape="poly" id="node2" href="http://zoomquiet.org" title="返回\nzoomquiet.org" alt="" coords="785,360,781,350,770,341,752,334,729,330,704,328,679,330,657,334,639,341,628,350,624,360,628,370,639,379,657,387,679,391,704,393,729,391,752,387,770,379,781,370"/>
+<area shape="poly" id="node3" href="mailto:zoomquiet+sns@gmail.com?subject=obp.zoomquiet.org mapping feedback" title="电俺" alt="" coords="650,528,648,521,643,515,635,510,625,507,614,506,603,507,593,510,585,515,580,521,578,528,580,535,585,541,593,546,603,549,614,550,625,549,635,546,643,541,648,535"/>
+<area shape="rect" id="node4" href="http://code.google.com/p/openbookproject/" title="O.B.P~OpenBookProjects\n开放图书计划" alt="" coords="203,354,395,400"/>
+<area shape="rect" id="node10" href="http://chaos2.zoomquiet.top/" title="乱入" alt="" coords="353,573,425,604"/>
+<area shape="rect" id="node6" href="http://lovelypython.readthedocs.org/" title="可爱的Python 电子版" alt="" coords="11,605,170,637"/>
+<area shape="rect" id="node7" href="https://bitbucket.org/ZoomQuiet/obp.love2python" title="可爱的Python II" alt="" coords="16,525,140,557"/>
+<area shape="rect" id="node8" href="http://zoomquiet.bitbucket.org/rwpy4l/" title="大蟒本色" alt="" coords="118,653,198,684"/>
+<area shape="rect" id="node11" href="http://chaos2.zoomquiet.top/crx/build/html/" title="crx" alt="" coords="471,574,543,604"/>
+<area shape="rect" id="node12" href="http://chaos2.zoomquiet.top/go1/build/html/" title="Go" alt="" coords="326,688,398,717"/>
+<area shape="rect" id="node13" href="http://chaos2.zoomquiet.top/node/build/html/" title="node.js" alt="" coords="448,637,520,666"/>
+<area shape="rect" id="node14" href="http://chaos2.zoomquiet.top/openresty/build/html/" title="openresty" alt="" coords="387,679,473,708"/>
+<area shape="rect" id="node15" href="http://chaos2.zoomquiet.top/sae/build/html/" title="SAE" alt="" coords="282,640,354,670"/>
+<area shape="rect" id="node16" href="http://chaos2.zoomquiet.top/wechat/build/html/" title="wechat" alt="" coords="435,521,507,550"/>
+<area shape="rect" id="node19" href="http://tpipyzh.readthedocs.org" title="TPiPy 中文版" alt="" coords="44,280,153,312"/>
+<area shape="rect" id="node20" href="http://zoomquiet.github.com/hgtip/" title="Hg妙招" alt="" coords="99,114,171,145"/>
+<area shape="rect" id="node21" href="https://bitbucket.org/ZoomQuiet/obp.rwiwpyzh" title="电子设备和Python" alt="" coords="5,148,146,180"/>
+<area shape="rect" id="node22" href="http://zoomquiet.org/res/d/taocn" title="社区艺术" alt="" coords="19,220,99,251"/>
+<area shape="rect" id="node24" href="http://docspy3zh.readthedocs.org" title="Py3文档" alt="" coords="189,48,265,79"/>
+<area shape="rect" id="node25" href="http://web2pybookzh.readthedocs.org" title="Web2py手册" alt="" coords="231,5,335,37"/>
+<area shape="rect" id="node26" href="http://crxdoczh.readthedocs.org" title="crx手册" alt="" coords="372,64,444,95"/>
+<area shape="rect" id="node27" href="http://pyconchina.github.io/pycoders-weekly-zh/" title="PyCoders周刊" alt="" coords="301,12,416,44"/>
+<area shape="rect" id="node29" href="http://zoomquiet.github.com/leo-doc-zh/leo_toc.html" title="Leo手册\nv4.9rc1" alt="" coords="472,264,547,310"/>
+<area shape="rect" id="node30" href="http://pyblosxom-doc-zh.readthedocs.org" title="PyBlosxom手册\nv1.5&#45;rc1" alt="" coords="469,190,593,236"/>
+<area shape="rect" id="node31" href="http://sphinx-doc-zh.readthedocs.org" title="Sphinx手册" alt="" coords="442,134,538,166"/>
+</map>

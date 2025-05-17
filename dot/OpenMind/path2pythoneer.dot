@@ -1,0 +1,168 @@
+digraph csdndr1_km {
+    /*生成命令:
+$ dot -Tpng path2pythoneer.dot -o path2pythoneer.png -Tcmapx -o path2pythoneer.map
+    全局设定
+    */
+    graph [label="Python 学习 {不完全路线图_v5.9.24.1919}"
+        ,fontsize=14.0,fontcolor=snow
+        ,fontname="Noto Sans S Chinese Medium"
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=LR
+        ,bgcolor="#333333"
+        ];
+    //,style="filled,setlinewidth(0.5)",fillcolor="#333333"    
+    node[fontsize=11.0,height=0.3
+        ,fontname="Noto Sans S Chinese DemiLight"
+        ,style="setlinewidth(0.5)"
+        ,color=gray,fontcolor=snow
+        ,shape=plaintext
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,fontname="Noto Sans S Chinese Light"
+        ,color=azure
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+*/
+    
+    pythonic [label="Pythonic",shape=ellipse
+            ,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://wiki.woodpecker.org.cn/moin/PythonIc"];
+
+{l_mid l_dev l_hack}->pythonic [style="dotted,setlinewidth(1)"];
+
+    root->l_mid->l_dev->l_hack[color=green,style="setlinewidth(4)"];
+
+    root [label="入门",shape=tab,
+            style="filled",fillcolor=snow,fontcolor="#333333"];
+        lpihw [label="笨办法学Py"];
+        tut_py[label="官方教程"];
+        py_guide[label="Hitchhiker"];
+        py_mooc[label="coursera"
+            , URL="https://zh.coursera.org/courses?query=python%20programming"];
+        codeskulptor[label="codeskulptor.org"];
+        
+
+    root->{lpihw tut_py py_guide py_mooc}[style="setlinewidth(2)"];
+        py_mooc->codeskulptor;
+
+
+    l_mid [label="进阶/脚本",shape=tab,
+            style="filled",fillcolor=snow,fontcolor="#333333"];
+        utf8[label="UTF-8"];
+        ipy[label="IPython"];
+        ipynb[label="IP[y]:NB"];
+
+        docopt[label="docopt"];
+        pocoo[label="pocoo"
+            , URL="http://click.pocoo.org/"];
+
+        virtualenv[label="virtualenv"];
+        pyenv[label="pyenv"];
+        x84[label="x/84"];
+
+    l_mid->{utf8 ipy CLI docopt virtualenv} [style="setlinewidth(2)"];
+        ipy->ipynb;
+        CLI->{Twilio docopt Urwid x84 Ncurses};
+            docopt->pocoo->{click Flask Jinja2 Sphinx Werkzeug Pygments};
+            Sphinx->{txt2tags AsciiDoc Pelican moinmoin};
+        virtualenv->pyenv->PEX;
+
+
+    l_dev [label="高级/工程",shape=tab,
+            style="filled",fillcolor=snow,fontcolor="#333333"];
+        devops[label="DevOps"];
+    
+        TDD[label="TDD"];
+            nose[label="nose"];
+            pytest[label="pytest"];
+
+        django[label="Django"];
+            restful[label="RESTful"];
+    
+        databasd[label="DB"];
+            sqla[label="SQLAlchemy"];
+
+        scikl [label="SciKit-lean"];
+
+        d3 [label="3D"];
+
+        IDE [label="IDE"
+            , URL="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments"];
+
+    l_dev->{devops PIL IDE Web GUI Mobile DataScience Zope Jython IronPython Leo}[style="setlinewidth(2)"];
+        devops->{Werkzeug TDD databasd PEP8 Hg Bazaar CI};
+            TDD->{nose pytest mock};
+            databasd->{sqla};
+            PEP8->{PyLint, PyFlakes};
+            CI->{Ansible Bitten Fabric SaltStack Buildout pip};
+
+        GUI->{Tkinter wxPython PyQt PyGTK};
+        PIL->{gnuplot d3 Game};
+            d3->{terry RenderMan Tractor};
+            Game->{PyGame PySonic};
+        IDE->{Anaconda ipynb PyCharm Ulipad NetBeans IDLE SublimeText Komodo};
+
+        Mobile->{Kivy QPython};
+
+        Web->{django Flask Bottle Tornado Jinja2}->{restful};
+            Tornado->{gevent, uWSGI, gUnicorn Twisted};
+
+        DataScience->{Visualizaion Pandas PySpark};
+            Pandas->{numpy scipy  scikl NLTK Networkx};
+                numpy->{Theano};
+            Visualizaion->{matplotlib bokeh ggplot searborn}
+        
+    l_hack [label="专家",shape=tab,
+            style="filled",fillcolor=snow,fontcolor="#333333"];
+        pypy[label="PyPy"];
+        cython[label="Cython"];
+
+    l_hack->{PEP pypy cython FP pdb} [style="setlinewidth(2)"];
+        cython->{Psyco pyrex Pyston PyParallel PyLLVM};
+        pdb->{pyperform Profiling FlameGraph};
+        FP->{lambda functools toolz fn pp};
+
+
+    etc [label="(略过...\n那......\n无尽的\n关键词)"];
+
+    /*
+    root->want->greateam [style="setlinewidth(4)"];
+        greateam->aka->grown [style="setlinewidth(3)"];
+
+    grown->{hr goal} ;
+    grown->km->wiki [style="setlinewidth(2)"];
+        km->{KmFormula kmeg} ;
+
+        wiki->acteam->soul [style="setlinewidth(1)"];
+            soul->EK;
+        wiki->{what cando spread};
+            spread->game [style="setlinewidth(1)"];
+            spread->{analyse EK};
+    analyse->rooterms;
+
+    {rooterms game aka}->Kaopulity [style="setlinewidth(2)"];
+
+    {hr goal km what acteam EK}->etc [style="dotted"];
+
+
+    nodeA->nodeB [label="日常",color=azure,style="setlinewidth(1)"];
+    nodeA->nodeB [label="活跃",color=azure,style="setlinewidth(2)"];
+    nodeA->nodeB [label="兴奋",color=azure,style="setlinewidth(3)"];
+    lotsMon->existProg;
+        tonesOptions->existProg;
+    
+    */
+
+
+    edge [style=invis];
+    etc->l_hack;
+
+}

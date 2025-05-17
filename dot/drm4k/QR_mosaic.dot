@@ -1,0 +1,115 @@
+    /*生成命令:
+$ dot -Tpng QR_mosaic.dot -o QR_mosaic.png
+
+ -Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+        ,fontname="WenQuanYi Micro Hei"
+    */
+
+digraph G4_mf_mobi_shell {
+    /*全局设定*/
+    graph [label="mosaic自动二维码替换-技术方案{流程图}"
+        ,fontsize=14.0
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=TB
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+*/
+
+    start       [label="流程开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+
+    /*图例关系
+    srvPUB->installer [label="2.0",style="dotted"];
+    APP_NFC->APP_CHK [label="2.1",style="setlinewidth(2)"];
+
+SRV_ECHO->APP_DL [label="3.3",style="dashed"];
+    */
+
+subgraph cluster_mobi {
+    label = "手机专用应用";
+
+    APP_SRV [label="照片监测服务"];
+    APP_QR [label="照片QR插入器"];
+    APP_REPO [label="应用广告库"];
+    APP_CFG [label="应用配置器"];
+    APP_DL [label="广告下载器"];
+
+}
+/* 应用配置 */
+start->APP_CFG [label="1.0",style="setlinewidth(2.5)"];
+    APP_CFG->APP_SRV [label="1.1",style="setlinewidth(2.5)"];
+APP_SRV->end [label="1.2",style="setlinewidth(2.5)"];
+
+/* 广告更新 */
+APP_DL->SRV_API [label="2.0",style="setlinewidth(1.5)"];
+    SRV_ECHO->APP_DL [label="2.1",style="setlinewidth(1.5)"];
+    SRV_REPO->APP_DL [label="2.2",style="setlinewidth(1.5)"];
+    APP_DL->APP_REPO [label="2.3",style="setlinewidth(1.5)"];
+/* 广告RQ */
+APP_SRV->APP_QR [label="4.0"];
+APP_QR->APP_REPO [label="4.1"];
+
+
+subgraph cluster_srv {
+    label = "云端服务";
+
+    SRV_API [label="查询接口"];
+    SRV_REPO [label="广告库", shape=box3d];
+    SRV_CHK [label="激活检验器"];
+    SRV_ECHO [label="下载回响器"];
+
+/* 广告授权 */
+    SRV_API->SRV_CHK [label="3.0",style="dashed"];
+    SRV_CHK->SRV_ECHO [label="3.1",style="dashed"];
+}
+
+
+/*
+    { rank=same; PUB    srvA srvB srvN; }
+    { rank=same; DL     installer; }
+    { rank=same; CHK    chker; }
+    { rank=same; DONE   bkStore; }
+
+    PUB[label="发布阶段",shape=plaintext];
+    DL[label="下载阶段",shape=plaintext];
+    CHK[label="检查阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+        PUB->DL->CHK->DONE;
+
+        srvPUB->srvAC;
+        srvA->srvB->srvN;
+*/
+    edge [style=invis];
+}
+

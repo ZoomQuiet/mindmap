@@ -1,0 +1,56 @@
+<map id="camp0py2map_ch05" name="camp0py2map_ch05">
+<area shape="rect" id="node1" href="https://gitlab.com/101camp" title="蠎营\nPythoniCamp" alt="" coords="141,361,251,407"/>
+<area shape="rect" id="node2" href="#" title="ch00\n周蠎" alt="" coords="315,361,387,407"/>
+<area shape="rect" id="node3" href="https://www.python.org/" title="Python 2.7" alt="" coords="504,145,595,184"/>
+<area shape="rect" id="node6" href="http://io.101.camp/camp0py2map_ch00.html" title="ch01\nCLI" alt="" coords="409,404,481,444"/>
+<area shape="rect" id="node4" href="https://github.com/gasolin/zhpy" title="zhpy" alt="" coords="714,54,786,93"/>
+<area shape="rect" id="node5" href="https://pypi.org/" title="pip" alt="" coords="619,145,691,184"/>
+<area shape="rect" id="node16" href="https://click.palletsprojects.com/en/7.x/" title="Click" alt="" coords="714,232,786,270"/>
+<area shape="rect" id="node35" href="https://docs.python.org/3.7/library/logging.html" title="logging" alt="" coords="809,921,881,960"/>
+<area shape="rect" id="node7" href="https://en.wikipedia.org/wiki/Shell_(computing)" title="shell" alt="" coords="514,497,586,536"/>
+<area shape="rect" id="node12" href="https://docs.python.org/3/" title="Python 3.7" alt="" coords="504,318,595,357"/>
+<area shape="rect" id="node21" href="#" title="ch02\nhelp" alt="" coords="514,923,586,963"/>
+<area shape="rect" id="node8" href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" title="bash &#160;" alt="" coords="619,514,691,553"/>
+<area shape="rect" id="node9" href="https://en.wikipedia.org/wiki/Z_shell" title="zsh &#160;&#160;" alt="" coords="619,452,691,490"/>
+<area shape="rect" id="node10" href="https://iterm2.com" title="iterm2" alt="" coords="714,796,786,834"/>
+<area shape="rect" id="node11" href="http://cmder.net/" title="cmder " alt="" coords="714,545,786,584"/>
+<area shape="rect" id="node13" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="REPL " alt="" coords="619,232,691,270"/>
+<area shape="rect" id="node14" href="https://pymotw.com/3/time/index.html" title="time" alt="" coords="619,294,691,333"/>
+<area shape="rect" id="node15" href="https://wiki.python.org/moin/CommandlineTools" title="CLI" alt="" coords="619,357,691,396"/>
+<area shape="rect" id="node17" href="https://en.wikipedia.org/wiki/Standard_streams" title="stdin" alt="" coords="714,294,786,333"/>
+<area shape="rect" id="node18" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)" title="stdout" alt="" coords="714,357,786,396"/>
+<area shape="rect" id="node19" href="https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)" title="stderr" alt="" coords="714,420,786,458"/>
+<area shape="rect" id="node22" href="https://docs.python.org/3.7/library/functions.html#print" title="print()" alt="" coords="619,986,691,1025"/>
+<area shape="rect" id="node25" href="https://docs.python.org/3.7/library/functions.html#dir" title="dir()" alt="" coords="619,1049,691,1088"/>
+<area shape="rect" id="node26" href="https://docs.python.org/3.7/library/functions.html#help" title="help()" alt="" coords="619,924,691,962"/>
+<area shape="rect" id="node27" href="#" title="ch03\ngit" alt="" coords="619,859,691,899"/>
+<area shape="rect" id="node23" href="https://docs.python.org/3/library/pprint.html" title="pprint" alt="" coords="714,986,786,1025"/>
+<area shape="rect" id="node24" href="https://docs.python.org/3/library/stdtypes.html?highlight=format#str.format" title="format()" alt="" coords="714,1049,787,1088"/>
+<area shape="rect" id="node28" href="https://git-scm.com/" title="git" alt="" coords="714,858,786,897"/>
+<area shape="rect" id="node34" href="#" title="ch04\npip" alt="" coords="714,922,786,962"/>
+<area shape="rect" id="node29" href="https://github.com/" title="github" alt="" coords="809,858,881,897"/>
+<area shape="rect" id="node30" href="https://gitlab.com/" title="gitlab" alt="" coords="809,786,881,825"/>
+<area shape="rect" id="node31" href="https://gitlab.com/help/user/project/issues/index.md" title="issue" alt="" coords="938,692,1010,730"/>
+<area shape="rect" id="node32" href="https://gitlab.com/help/user/project/wiki/index.md" title="wiki" alt="" coords="938,754,1010,793"/>
+<area shape="rect" id="node33" href="https://gitlab.com/help/user/discussions/index.md" title="commit comments" alt="" coords="904,817,1044,856"/>
+<area shape="rect" id="node43" href="#" title="ch05\ntext" alt="" coords="809,1070,881,1110"/>
+<area shape="rect" id="node36" href="https://docs.python.org/3.7/library/logging.html#handler-objects" title="file\nHandler" alt="" coords="938,880,1011,920"/>
+<area shape="rect" id="node37" href="https://docs.python.org/3.7/library/logging.html#levels" title="Bug Level" alt="" coords="931,945,1018,984"/>
+<area shape="rect" id="node38" href="#" title="CRITICAL" alt="" coords="1069,1008,1157,1046"/>
+<area shape="rect" id="node39" href="#" title="ERROR" alt="" coords="1076,1070,1150,1109"/>
+<area shape="rect" id="node40" href="#" title="WARNING" alt="" coords="1067,820,1159,858"/>
+<area shape="rect" id="node41" href="#" title="INFO" alt="" coords="1077,882,1149,921"/>
+<area shape="rect" id="node42" href="#" title="DEBUG" alt="" coords="1076,945,1150,984"/>
+<area shape="rect" id="node44" href="https://en.wikipedia.org/wiki/Comma-separated_values" title="csv" alt="" coords="938,1008,1010,1046"/>
+<area shape="rect" id="node45" href="https://docs.python.org/3/library/stdtypes.html?highlight=dict#dict" title="dict" alt="" coords="938,1070,1010,1109"/>
+<area shape="rect" id="node46" href="https://docs.python.org/3.7/library/pickle.html" title="pickle" alt="" coords="938,1133,1010,1172"/>
+<area shape="rect" id="node47" href="#" title="ch06\nweb" alt="" coords="938,1196,1010,1236"/>
+<area shape="rect" id="node48" href="#" title="ch07\nlogging" alt="" coords="1077,1196,1149,1236"/>
+<area shape="rect" id="node49" href="#" title="ch08\nSaaS" alt="" coords="1181,1196,1253,1236"/>
+<area shape="rect" id="node50" href="#" title="ch09\nAPI" alt="" coords="1276,1196,1348,1236"/>
+<area shape="rect" id="node51" href="#" title="ch10\nMVP" alt="" coords="1371,1196,1443,1236"/>
+<area shape="rect" id="node52" href="#" title="ch11\nCI" alt="" coords="1465,1196,1537,1236"/>
+<area shape="rect" id="node53" href="#" title="ch12\n探索" alt="" coords="1560,1193,1632,1239"/>
+<area shape="poly" id="node59" href="mailto:pythonicamp@googlegroups.com?subject=[101 mapping] " title="邮件吼俺" alt="" coords="118,350,116,343,108,337,95,332,79,329,62,328,44,329,29,332,16,337,8,343,5,350,8,357,16,363,29,368,44,371,62,372,79,371,95,368,108,363,116,357"/>
+<area shape="poly" id="node60" href="https://gitlab.com/pythonicamp" title="返回\n" alt="" coords="98,418,96,411,91,405,83,400,73,397,62,396,51,397,41,400,33,405,28,411,26,418,28,425,33,431,41,436,51,439,62,440,73,439,83,436,91,431,96,425"/>
+</map>
